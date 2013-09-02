@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} · {{ site.name }}</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +21,16 @@
         </div>
 
         <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li {% if page.path == 'index.html' %} class="active" {% endif %}>
+              <a href="/">Projects</a>
+            </li>
+
+            <li {% if page.path == 'resume.html' %} class="active" {% endif %}>
+              <a href="/resume.html">Résumé</a>
+            </li>
+          </ul>
+
           <ul class="nav navbar-nav navbar-right">
             <li><a href="https://github.com/programble">
               <i class="icon-github-alt"></i> Github
