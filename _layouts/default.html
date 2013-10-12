@@ -23,7 +23,11 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li {% if page.path == 'index.html' %} class="active" {% endif %}>
-              <a href="/">Projects</a>
+              <a href="/">About</a>
+            </li>
+
+            <li {% if page.path == 'projects.html' %} class="active" {% endif %}>
+              <a href="/projects.html">Projects</a>
             </li>
 
             <li {% if page.path == 'resume.html' %} class="active" {% endif %}>
