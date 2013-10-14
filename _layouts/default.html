@@ -58,5 +58,12 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        var age = Math.floor((new Date() - new Date(1995, 6, 14)) / 31536000000);
+        $('#a').html(age == 18 ? 'an' : 'a');
+        $('#age').html(age);
+      });
+    </script>
   </body>
 </html>
