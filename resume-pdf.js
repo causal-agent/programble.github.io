@@ -1,6 +1,6 @@
 #!/usr/bin/env phantomjs
 
-var url = 'http://localhost:4000/resume.html';
+var url = 'http://cmcenroe.dev/resume.html';
 var output = 'resume.pdf';
 
 var page = require('webpage').create();
