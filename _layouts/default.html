@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ page.title }} · {{ site.name }}</title>
+    {% if page.title %}
+      <title>{{ page.title }} · {{ site.name }}</title>
+    {% else %}
+      <title>{{ site.name }}</title>
+    {% endif %}
+
 
     <meta charset="utf-8">
     <link rel="icon" type="image/jpeg" href="//gravatar.com/avatar/{{ site.gravatar }}?s=16">
