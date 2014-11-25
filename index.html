@@ -37,5 +37,16 @@ id: about
       include <em>Swans</em>, <em>mewithoutYou</em> and <em>Neutral Milk
       Hotel</em>.
     </p>
+
+    <hr>
+
+    <div class="list-group">
+      {% for post in site.posts %}
+      <a class="list-group-item" href="{{ post.url}}">
+        <h4 class="list-group-item-heading">{{ post.title }}</h4>
+        <p class="list-group-item-text">{{ post.date | date: "%A, %-d %B, %Y" }}</p>
+      </a>
+      {% endfor %}
+    </div>
   </div>
 </div>
