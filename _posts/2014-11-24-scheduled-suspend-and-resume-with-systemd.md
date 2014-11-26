@@ -105,6 +105,14 @@ created a no-op in `/etc/systemd/system/auto-resume.service`:
 Once again, there is likely a better way to achieve this, but I am no
 systemd expert.
 
+(Added 2014-11-25) It was brought to my attention that unitless wake
+timers were suggested [here][unitless-mail], and were added to the
+"TODO" file [here][unitless-commit]. Thanks to Alexandre Detiste for the
+information.
+
+ [unitless-mail]: https://www.mail-archive.com/systemd-devel@lists.freedesktop.org/msg23910.html
+ [unitless-commit]: https://github.com/systemd/systemd/commit/8483d73ff158ee0d51ccbba09a470cc6ae9b071a
+
 ### Make it Go
 
 To turn these timers on, enable and start them:
