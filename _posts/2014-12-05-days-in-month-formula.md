@@ -10,10 +10,11 @@ knuckles, but these didn't satisfy me. I wondered if there was a
 mathematical formula for the problem, and upon not immediately finding
 one, I challenged myself to create one.
 
-Put more formally, the challenge was this: find a function
-<i class="formula">f</i>, such that <i class="formula">f(x)</i> is equal
-to the number of days in month <i class="formula">x</i>, represented by
-the integers 1 through 12. Or, as a table of values:<sup>1</sup>
+<del>Put more formally</del> In other words, the challenge was this:
+find a function <i class="formula">f</i>, such that
+<i class="formula">f(x)</i> is equal to the number of days in month
+<i class="formula">x</i>, represented by the integers 1 through 12. Or,
+as a table of values:<sup>1</sup>
 
 <div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
   <div class="table-responsive"><table class="table table-bordered tov">
@@ -141,8 +142,8 @@ formulas.
 ## Masking
 
 What we need here is basically a piece-wise function, but that's just no
-fun. The challenge is to create a single formula. This got me thinking
-of other ways to use a part of a function only over a certain domain.
+fun. This got me thinking of other ways to use a part of a function only
+over a certain domain.
 
 I figured the easiest way to do this would be to find an expression
 equal to 1 over the desired domain and 0 otherwise. Multiplying a term
@@ -301,10 +302,13 @@ get the final formula:
 
 ## Conclusion
 
+*2014-12-06: Hello, Internet. This is tongue-in-cheek. Why would anyone
+use this?*
+
 There you have it, a formula for the number of days in each month using
 simple arithmetic. So next time you find yourself wondering how many
-days are in September, just remember to apply <span
-class="formula"><i>f</i>(9)</span>. For ease of use, here's a JavaScript
+days are in September, just remember to apply
+<span class="formula"><i>f</i>(9)</span>. For ease of use, here's a JavaScript
 one-liner:
 
     function f(x) { return 28 + (x + Math.floor(x/8)) % 2 + 2 % x + 2 * Math.floor(1/x); }
