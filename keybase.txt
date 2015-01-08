@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/programble
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://cmcenroe.me
+  * I am programble (https://keybase.io/programble) on keybase.
+  * I have a public key with fingerprint F6E9 B2BD 6771 B3BC 43E9  6190 ADA3 890D CBE1 D34D
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.3"
+        },
+        "key": {
+            "fingerprint": "f6e9b2bd6771b3bc43e96190ada3890dcbe1d34d",
+            "host": "keybase.io",
+            "key_id": "ADA3890DCBE1D34D",
+            "uid": "966d5020b5765209edcfce6dc0825400",
+            "username": "programble"
+        },
+        "merkle_root": {
+            "ctime": 1420687882,
+            "hash": "6d4841c091c4fd165c6546fd49bd534bba48991e4be870eb376a9fec626a20fd3407abd8a5bafc4410e02552cc849e1e0ce083d668da30015b77539c87142e7d",
+            "seqno": 124767
+        },
+        "service": {
+            "hostname": "cmcenroe.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1420688052,
+    "expire_in": 157680000,
+    "prev": "2eb54017d13a1efa55ea004147bfd996a4da5641f0872d56303c9526d36a3ace",
+    "seqno": 2,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Comment: GPGTools - https://gpgtools.org
+
+owFVU3tQFVUchiuYEpA2vGx84EVEZi6Xs6+zu0Q2yMMGc3JKLDC97O45e1mBu5d7
+LyAaGoOM4vCWGrSHE5hmAsOUr5gUsFEwhCZJwkARRgmBJMKxiZpol6Epz1979ved
+7/d93++cCp8Fbl7uDXXFPp1DPZvdOx+KblsbZs7uNYoqyjNG7TVKGQq2ufQvm5CJ
+jVHGdJwnCk5sVtRgm4qweZczeB5jMuZgh1NRbRoKmFkzZcw36XD9sKzYrNhhdyg6
+l1GGmBdJEUGWJURKlGgK85DggYAEiuMBkkRMIIpGGmWa6nQ91dU4x2lRkPY3Ji5G
+x8fFbogn4ig6TqtlzxV4CBEDSCAyLGRIwGMkyRKGSAIcydAA6EAndsxbsjtUq0PI
+FDOwrjgTO9IzsMWhqnO2JZeigwiaBJBjOY7UNAnONO0YRDRHExLgCYmWEQEZCTI0
+lBHNi4ihaFEUaI7nCUyLmGMBFikWCryMJUhCgQSyZhCwgog4gREFWaJpAmBAMgwp
+SRzNYwIDCQOOQhByWiwAEIzIsgzFSxyricGsno4TZ9lUTRxJs5DN1/eOHEXCum49
+uHl/UqaEbQ4Vm7WdSXfrUiU1QyukuVz2KN2zK8+uA3Ox2GiZ57CIig1pU/v/WAkN
++lQeHGC0PPBuu+LAFkVHaIFzQFt6H5yjcZJY1BInWERQAoFlgWGwAABN0KwoI56H
+Ao0EBtKEDDiWRAykACXxDAkRBQVKkPB/LrVOLsGqUToVq01wZTu0cRUblnu4uXu5
+LfQ06PfWzWvxkn8vs9X+3OzrYSmN0q1dHuObCkL61i3tTrn3ExN8bP8tJ9F2rjq/
+Kca7Y4pQ8EBJ5oeVXWvcczfat1hdYYW2xM8beq61/tW//jJKeTVKGV37aNqjxrDP
+4B9rmRmoSk2qHzeYB17ufeFUwxIQrR4vXHpH2WrKvjZOBR0tsO57f3bG5s58Nn0/
+zfKaoeoYvl+2qTIg+cnV5vDuGlSY33E7qK19/FDcNw/U9PSS0POXSw3+5YZVe36t
+PdC/bS2XFM4uG+O+aK17sKd64qULk3kZYxdCYkJN2T8WJ8eX+e303OZ2/eZkUYi4
+ODb2W64nIvfEJ6f7RhNW+hcNBbQQ02eMYSe+7K95uGYwKf+HrOiEuht3yoojA7s9
+z7WFN8XH55kO1jt3Psofk5OGk7vNtf5Nxqhia6T3aUNva+DxojMjr1QIeHuoq70T
+1G+ZxblFgX9X3jRP+tV3ffd4MDlmx9GK0Pbh9dTbi7qK6jr8U7/2WxDdu2rqg0Xn
+G4i+2nZT1eiE99WPGl/8Y/vqFVei6N1f+fZ8Wl24sTrmypPOu+UBg3dLz/o+Ew5/
+v9jTYtph9kt9NjA7oTGSGg45eePxgP2I9eOCIyMTWe8sO1Ty89Dtd1MiDl/SXvfC
+X95rqRP+fL653Hf4YPOBoTdOqj6nNrDrTEFvjiiJ14UV+yOmNsv3cqe/f6t/9W8N
+QT4w8VKpv/Xi8pVT/wA=
+=sNS8
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/programble
+
+==================================================================
