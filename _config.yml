@@ -1,3 +1,147 @@
 name: Curtis McEnroe
 email: curtis@cmcenroe.me
 gravatar: ca0c9cb798fd7f80444740a4dbaef7b9
+
+projects:
+  - name: Web
+    items:
+      - name: Discohands
+        repo: busbud/discohands
+        tech: [Node.js, MongoDB]
+        year: 2014
+        icon: fa-comments
+        desc: Democratically choose topics to discuss
+
+      - name: Refheap
+        repo: Raynes/refheap
+        tech: [Clojure, MongoDB]
+        year: 2013–2014
+        icon: fa-paste
+        desc: '"The Reference Heap" pastebin'
+
+      - name: Sesame
+        repo: busbud/sesame
+        tech: [Node.js, PostgreSQL]
+        year: 2015
+        icon: fa-lock
+        desc: Secure data storage API
+
+      - name: Listens.ws
+        repo: listens-ws
+        tech: [Node.js, PostgreSQL]
+        year: 2014
+        icon: fa-music
+        desc: Music listening history and statistics service
+
+      - name: Dirt
+        repo: programble/dirt
+        tech: [Ruby, Redis]
+        year: 2013
+        icon: fa-search
+        desc: Language detection service
+
+  - name: Libraries
+    items:
+      - name: Errio
+        repo: programble/errio
+        tech: [Node.js]
+        year: 2015
+        icon: fa-exchange
+        desc: Error serialization and deserialization
+
+      - name: SuperError
+        repo: busbud/super-error
+        tech: [JavaScript]
+        year: 2014
+        icon: fa-exclamation-triangle
+        desc: Easily subclass errors
+
+      - name: Configru
+        repo: programble/configru
+        tech: [Ruby]
+        year: 2011–2013
+        icon: fa-cogs
+        desc: YAML configuration library
+
+      - name: Hemp
+        repo: programble/hemp
+        tech: [JavaScript]
+        year: 2015
+        icon: fa-pencil
+        desc: Simple JavaScript string builder
+
+  - name: Development
+    items:
+      - name: Pult
+        repo: programble/pult
+        tech: [Node.js]
+        year: 2014
+        icon: fa-terminal
+        desc: Access local servers on .dev domains
+
+      - name: Apricot
+        repo: apricot-lang/apricot
+        tech: [Ruby]
+        year: 2012–2013
+        icon: fa-code
+        desc: Clojure-like Lisp on Rubinius
+
+  - name: Experiments
+    items:
+      - name: Gury
+        repo: programble/gury
+        tech: [Node.js]
+        year: 2015
+        icon: fa-picture-o
+        desc: Upload anything to imgur
+
+      - name: Caps
+        repo: programble/caps
+        tech: [Node.js]
+        year: 2014
+        icon: fa-cloud-upload
+        desc: Store any file on anonymous public services
+
+      - name: Forklimit
+        repo: programble/forklimit
+        tech: [C]
+        year: 2013
+        icon: fa-bomb
+        desc: Prevent fork-bombs
+
+      - name: Keyloog
+        repo: programble/keyloog
+        tech: [C]
+        year: 2011
+        icon: fa-keyboard-o
+        desc: Keylogger for X
+
+  - name: Games
+    items:
+      - name: Bare Metal Tetris
+        repo: programble/bare-metal-tetris
+        tech: [C]
+        year: 2014
+        icon: fa-gamepad
+        desc: Tetris for x86
+
+      - name: Letterwang
+        repo: programble/letterwang
+        tech: [Node.js, Socket.IO]
+        year: 2013
+        icon: fa-font
+        desc: Multiplayer word-spelling game
+
+  - name: Configuration
+    items:
+      - name: Effuse
+        repo: programble/effuse
+        tech: [Ruby]
+        year: 2012–2013
+        icon: fa-file-text
+        desc: Tool for symlinking dotfiles
+
+      - name: Dotfiles
+        repo: programble/dotfiles
+        icon: fa-cog
+        desc: Configuration files for VIM, zsh, etc.

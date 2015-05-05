@@ -9,167 +9,28 @@ id: projects
 </div>
 
 <div class="row">
-  <div class="col-md-4 col-sm-6">
-    <h2>Web</h2>
+  {% for category in site.projects %}
+    <div class="col-md-4 col-sm-6">
+      <h2>{{ category.name }}</h2>
 
-    <h3>
-      <small><i class="fa fa-comments"></i></small>
-      <a href="https://github.com/busbud/discohands">Discohands</a>
-      <small>Node.js, MongoDB, <small>2014</small></small>
-    </h3>
-    <p>Democratically choose topics to discuss</p>
+      {% for project in category.items %}
+        <h3>
+          <small><i class="fa {{ project.icon }}"></i></small>
+          <a href="https://github.com/{{ project.repo }}">{{ project.name }}</a>
+          <small>
+            {% if project.tech %}
+              {{ project.tech | join:', ' }},
+            {% endif %}
+            <small>{{ project.year }}</small>
+          </small>
+        </h3>
+        <p>{{ project.desc }}</p>
+      {% endfor %}
 
-    <h3>
-      <small><i class="fa fa-paste"></i></small>
-      <a href="https://github.com/Raynes/refheap">Refheap</a>
-      <small>Clojure, MongoDB, <small>2013–2014</small></small>
-    </h3>
-    <p>"The Reference Heap" pastebin</p>
+    </div>
 
-    <h3>
-      <small><i class="fa fa-lock"></i></small>
-      <a href="https://github.com/busbud/sesame">Sesame</a>
-      <small>Node.js, PostgreSQL, <small>2015</small></small>
-    </h3>
-    <p>Secure data storage API</p>
-
-    <h3>
-      <small><i class="fa fa-music"></i></small>
-      <a href="https://github.com/listens-ws">Listens.ws</a>
-      <small>Node.js, PostgreSQL, <small>2014</small></small>
-    </h3>
-    <p>Music listening history and statistics service</p>
-
-    <h3>
-      <small><i class="fa fa-search"></i></small>
-      <a href="https://github.com/programble/dirt">Dirt</a>
-      <small>Ruby, Redis, <small>2013</small></small>
-    </h3>
-    <p>Language detection service</p>
-  </div>
-
-  <div class="col-md-4 col-sm-6">
-    <h2>Libraries</h2>
-
-    <h3>
-      <small><i class="fa fa-exchange"></i></small>
-      <a href="https://github.com/programble/errio">Errio</a>
-      <small>Node.js, <small>2015</small></small>
-    </h3>
-    <p>Error serialization and deserialization</p>
-
-    <h3>
-      <small><i class="fa fa-exclamation-triangle"></i></small>
-      <a href="https://github.com/busbud/super-error">SuperError</a>
-      <small>JavaScript, <small>2014</small></small>
-    </h3>
-    <p>Easily subclass errors</p>
-
-    <h3>
-      <small><i class="fa fa-cogs"></i></small>
-      <a href="https://github.com/programble/configru">Configru</a>
-      <small>Ruby, <small>2011–2013</small></small>
-    </h3>
-    <p>YAML configuration library</p>
-
-    <h3>
-      <small><i class="fa fa-pencil"></i></small>
-      <a href="https://github.com/programble/hemp">Hemp</a>
-      <small>JavaScript, <small>2015</small></small>
-    </h3>
-    <p>Simple JavaScript string builder</p>
-  </div>
-
-  <div class="clearfix visible-sm"></div>
-
-  <div class="col-md-4 col-sm-6">
-    <h2>Development</h2>
-
-    <h3>
-      <small><i class="fa fa-terminal"></i></small>
-      <a href="https://github.com/programble/pult">Pult</a>
-      <small>Node.js, <small>2014</small></small>
-    </h3>
-    <p>Access local servers on .dev domains</p>
-
-    <h3>
-      <small><i class="fa fa-code"></i></small>
-      <a href="https://github.com/apricot-lang/apricot">Apricot</a>
-      <small>Ruby, <small>2012–2013</small></small>
-    </h3>
-    <p>Clojure-like Lisp on Rubinius</p>
-  </div>
-
-  <div class="clearfix visible-md visible-lg"></div>
-
-  <div class="col-md-4 col-sm-6">
-    <h2>Experiments</h2>
-
-    <h3>
-      <small><i class="fa fa-picture-o"></i></small>
-      <a href="https://github.com/programble/gury">Gury</a>
-      <small>Node.js, <small>2015</small></small>
-    </h3>
-    <p>Upload anything to imgur</p>
-
-    <h3>
-      <small><i class="fa fa-cloud-upload"></i></small>
-      <a href="https://github.com/programble/caps">Caps</a>
-      <small>Node.js, <small>2014</small></small>
-    </h3>
-    <p>Store any file on anonymous public services</p>
-
-    <h3>
-      <small><i class="fa fa-bomb"></i></small>
-      <a href="https://github.com/programble/forklimit">Forklimit</a>
-      <small>C, <small>2013</small></small>
-    </h3>
-    <p>Prevent fork-bombs</p>
-
-    <h3>
-      <small><i class="fa fa-keyboard-o"></i></small>
-      <a href="https://github.com/programble/keyloog">Keyloog</a>
-      <small>C, <small>2011</small></small>
-    </h3>
-    <p>Keylogger for X</p>
-  </div>
-
-  <div class="clearfix visible-sm"></div>
-
-  <div class="col-md-4 col-sm-6">
-    <h2>Games</h2>
-
-    <h3>
-      <small><i class="fa fa-gamepad"></i></small>
-      <a href="https://github.com/programble/bare-metal-tetris">
-        Bare Metal Tetris
-      </a>
-      <small>C, <small>2014</small></small>
-    </h3>
-    <p>Tetris for x86</p>
-
-    <h3>
-      <small><i class="fa fa-font"></i></small>
-      <a href="https://github.com/programble/letterwang">Letterwang</a>
-      <small>Node.js, <small>2013</small></small>
-    </h3>
-    <p>Multiplayer word-spelling game</p>
-  </div>
-
-  <div class="col-md-4 col-sm-6">
-    <h2>Configuration</h2>
-
-    <h3>
-      <small><i class="fa fa-file-text"></i></small>
-      <a href="https://github.com/programble/effuse">Effuse</a>
-      <small>Ruby, <small>2012–2013</small></small>
-    </h3>
-    <p>Tool for symlinking dotfiles</p>
-
-    <h3>
-      <small><i class="fa fa-cog"></i></small>
-      <a href="https://github.com/programble/dotfiles">Dotfiles</a>
-    </h3>
-    <p>Configuration files for VIM, zsh, etc.</p>
-  </div>
+    <div class="clearfix {% cycle 'hidden', 'visible-sm' %}"></div>
+    <div class="clearfix {% cycle 'hidden', 'hidden', 'visible-md visible-lg' %}">
+    </div>
+  {% endfor %}
 </div>
