@@ -1,6 +1,57 @@
 name: Curtis McEnroe
 email: curtis@cmcenroe.me
+domain: cmcenroe.me
 gravatar: ca0c9cb798fd7f80444740a4dbaef7b9
+
+resume:
+  tech:
+    - name: Languages
+      items: [JavaScript, TypeScript, C, Ruby, Clojure, Python]
+
+    - name: Datastores
+      items: [PostgreSQL, MongoDB, Redis]
+
+    - name: Systems
+      items: [OS X, Ubuntu, Arch Linux]
+
+    - name: Tools
+      items: [Git]
+
+  work:
+    - title: Software Developer
+      company: Busbud
+      location: Montréal, Québec, Canada
+      start: December 2013
+      end: April 2015
+      doings:
+        - Migrated, designed, and optimized data models
+        - Developed efficient APIs for accessing and interacting with Busbud's data
+        - Implemented models, abstractions and adapters for interacting with partners' APIs
+        - Performed PostgreSQL database maintenance
+
+  education:
+    - program: Computer Science Technology
+      school: Dawson College
+      start: 2013
+      end: 2013
+
+    - program: Pure and Applied Science
+      school: Dawson College
+      start: 2012
+      end: 2013
+
+    - school: Howard S. Billings Regional High School
+      start: 2007
+      end: 2012
+
+  awards:
+    - name: Physics Award
+      school: Howard S. Billings Regional High School
+      year: 2012
+
+    - name: Academic Honour Roll
+      school: Howard S. Billings Regional High School
+      year: 2007–2012
 
 projects:
   - name: Web

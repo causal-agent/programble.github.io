@@ -24,10 +24,10 @@ id: resume
   </p>
   <p>
     <span class="visible-print">
-      Website: cmcenroe.me
+      Website: {{ site.domain }}
     </span>
     <span class="hidden-print">
-      <a href="http://cmcenroe.me">cmcenroe.me</a>
+      <a href="http://{{ site.domain }}">{{ site.domain }}</a>
     </span>
   </p>
 </div>
@@ -35,45 +35,46 @@ id: resume
 <h3>Technical Experience</h3>
 
 <dl class="dl-horizontal">
-  <dt>Languages</dt>
-  <dd>JavaScript, C, Ruby, Clojure, Python</dd>
-
-  <dt>Datastores</dt>
-  <dd>PostgreSQL, MongoDB, Redis</dd>
-
-  <dt>Systems</dt>
-  <dd>OS X, Ubuntu, Arch Linux</dd>
-
-  <dt>Tools</dt>
-  <dd>Git</dd>
+  {% for category in site.resume.tech %}
+    <dt>{{ category.name }}</dt>
+    <dd>{{ category.items | join:', ' }}</dd>
+  {% endfor %}
 </dl>
 
 <h3>Work Experience</h3>
 
 <ol class="list-unstyled">
-  <li>
-    <strong>Developer, December 2013 – April 2015</strong><br>
-    Busbud, Montréal, Québec, Canada<br>
-    <ul>
-      <li>Migrated, designed, and optimized data models</li>
-      <li>Developed efficient APIs for accessing and interacting with Busbud's data</li>
-      <li>Implemented models, abstractions and adapters for interacting with partners' APIs</li>
-      <li>Performed PostgreSQL database maintenance</li>
-    </ul>
-  </li>
+  {% for job in site.resume.work %}
+    <li>
+      <strong>{{ job.title }}, {{ job.start }} – {{ job.end }}</strong><br>
+      {{ job.company }}, {{ job.location }}<br>
+      <ul>
+        {% for doing in job.doings %}
+          <li>{{ doing }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
 </ol>
 
 <h3>Education</h3>
 
 <ol class="list-unstyled">
-  <li>Computer Science Technology, Dawson College, 2013</li>
-  <li>Pure and Applied Science, Dawson College, 2012–2013</li>
-  <li>Howard S. Billings Regional High School, 2007–2012</li>
+  {% for education in site.resume.education %}
+    <li>
+      {% if education.program %}
+        {{ education.program }},
+      {% endif %}
+      {{ education.school }},
+      {{ education.start }}–{{ education.end }}
+    </li>
+  {% endfor %}
 </ol>
 
 <h3>Honours and Awards</h3>
 
 <ol class="list-unstyled">
-  <li>Physics Award, Howard S. Billings Regional High School, 2012</li>
-  <li>Academic Honour Roll, Howard S. Billings Regional High School, 2007–2012</li>
+  {% for award in site.resume.awards %}
+    <li>{{ award.name }}, {{ award.school }}, {{ award.year }}</li>
+  {% endfor %}
 </ol>
