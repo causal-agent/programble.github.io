@@ -35,5 +35,5 @@ and *Thee Silver Mt. Zion Memorial Orchestra*.
 Some of my other
 favourite artists include
 *Swans*,
-*mewithoutYou*
+*mewithoutYou*,
 and *Neutral Milk Hotel*.
