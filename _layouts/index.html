@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-sm-4">
+    <p>
+      <img src="//gravatar.com/avatar/{{ site.gravatar }}?s=360"
+           alt="My face" class="img-responsive img-rounded">
+    </p>
+  </div>
+
+  <div class="col-sm-8">
+    {{ content }}
+
+    <hr>
+
+    <div class="list-group">
+      {% for post in site.posts %}
+        <a class="list-group-item" href="{{ post.url }}">
+          <h4 class="list-group-item-heading">{{ post.title }}</h4>
+          <p class="list-group-item-text">
+            {{ post.date | date:'%A, %-d %B, %Y' }}
+          </p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
