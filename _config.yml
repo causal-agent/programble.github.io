@@ -3,6 +3,31 @@ email: curtis@cmcenroe.me
 domain: cmcenroe.me
 gravatar: ca0c9cb798fd7f80444740a4dbaef7b9
 
+nav:
+  pages:
+    - name: Projects
+      id: projects
+
+    - name: Résumé
+      id: resume
+
+  links:
+    - name: GitHub
+      href: https://github.com/programble
+      icon: fa-github-alt
+
+    - name: LinkedIn
+      href: https://ca.linkedin.com/in/cmcenroe
+      icon: fa-linkedin
+
+    - name: Email
+      href: mailto:curtis@cmcenroe.me
+      icon: fa-envelope
+
+    - name: Keybase
+      href: https://keybase.io/programble
+      icon: fa-lock
+
 resume:
   tech:
     - name: Languages
