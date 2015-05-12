@@ -31,16 +31,40 @@ nav:
 resume:
   tech:
     - name: Languages
-      items: [JavaScript, TypeScript, C, Ruby, Clojure, Python]
+      items:
+        - JavaScript
+        - TypeScript
+        - C
+        - Ruby
+        - Clojure
+        - Python
+
+    - name: Frameworks
+      items:
+        - Node.js / io.js
+        - Express
+        - Sinatra
 
     - name: Datastores
-      items: [PostgreSQL, MongoDB, Redis]
+      items:
+        - PostgreSQL
+        - MongoDB
+        - Redis
+
+    - name: Tools & Platforms
+      items:
+        - Git
+        - GitHub
+        - Heroku
+        - AWS
+        - Digital Ocean
+        - Spreedly
 
     - name: Systems
-      items: [OS X, Ubuntu, Arch Linux]
-
-    - name: Tools
-      items: [Git]
+      items:
+        - OS X
+        - Ubuntu
+        - Arch Linux
 
   work:
     - title: Software Developer

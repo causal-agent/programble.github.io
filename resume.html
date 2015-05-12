@@ -15,20 +15,11 @@ id: resume
 
   <h3>Curtis McEnroe</h3>
   <p>
-    <span class="visible-print">
-      Email: {{ site.email }}
-    </span>
-    <span class="hidden-print">
-      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-    </span>
-  </p>
-  <p>
-    <span class="visible-print">
-      Website: {{ site.domain }}
-    </span>
-    <span class="hidden-print">
-      <a href="http://{{ site.domain }}">{{ site.domain }}</a>
-    </span>
+    <ul class="list-unstyled visible-print">
+      <li>{{ site.domain }}</li>
+      <li>{{ site.email }}</li>
+      <li>github.com/programble</li>
+    </ul>
   </p>
 </div>
 
