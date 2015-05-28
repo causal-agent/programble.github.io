@@ -4,7 +4,7 @@ layout: index
 
 <p class="lead">
 Hi, I'm Curtis.
-I am a 19-year-old
+I am a 20-year-old
 software developer
 from Montréal, Québec.
 </p>
