@@ -34,19 +34,19 @@ id: resume
 
 <h3>Work Experience</h3>
 
-<ol class="list-unstyled">
-  {% for job in site.resume.work %}
-    <li>
-      <strong>{{ job.title }}, {{ job.start }} – {{ job.end }}</strong><br>
-      {{ job.company }}, {{ job.location }}<br>
-      <ul>
-        {% for doing in job.doings %}
-          <li>{{ doing }}</li>
-        {% endfor %}
-      </ul>
-    </li>
-  {% endfor %}
-</ol>
+{% for job in site.resume.work %}
+  <h4>
+    {{ job.title }}, {{ job.start }} – {{ job.end }}
+    <br>
+    <small>{{ job.company }}, {{ job.location }}</small>
+  </h4>
+  <p>{{ job.stack | join:', ' }}</p>
+  <ul>
+    {% for doing in job.doings %}
+      <li>{{ doing }}</lii>
+    {% endfor %}
+  </ul>
+{% endfor %}
 
 <h3>Education</h3>
 

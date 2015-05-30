@@ -58,7 +58,6 @@ resume:
         - Heroku
         - AWS
         - Digital Ocean
-        - Spreedly
 
     - name: Systems
       items:
@@ -72,6 +71,7 @@ resume:
       location: Montréal, Québec, Canada
       start: December 2013
       end: April 2015
+      stack: [Node.js, Express, PostgreSQL, Redis, Heroku, AWS]
       doings:
         - Migrated, designed, and optimized data models
         - Developed efficient APIs for accessing and interacting with Busbud's data
