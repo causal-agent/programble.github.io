@@ -152,4 +152,6 @@ yet, so I'll worry about it later.
 To have different schedules on weekends and weekdays, I created two `.timer`
 files with `WakeSystem=true`, and prefixed the `OnCalendar` value of one with
 `Mon,Tue,Wed,Thu,Fri`, and the other with `Sat,Sun`. The same can be done for
-suspend. Remember to enable and start all timers.
+suspend. For the timers with different names, specify the unit it should invoke
+with `Unit=auto-resume.service`, for example. Remember to enable and start all
+timers.
