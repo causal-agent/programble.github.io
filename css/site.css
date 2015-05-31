@@ -1,3 +1,8 @@
+/* Rouge highlighter */
+.k { color: #f0ad4e; }
+.na, .nt { color: #d9534f; }
+.s, .s1, .s2 { color: #5cb85c; }
+
 /* Footnotes */
 .post-body ol:last-child {
   padding-top: 20px;
