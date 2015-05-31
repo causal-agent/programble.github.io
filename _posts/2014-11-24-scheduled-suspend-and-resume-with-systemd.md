@@ -24,12 +24,16 @@ the lid is closed. Kind of important for a laptop server.
 The way to do this with [systemd][systemd] (the init system we all know and
 love) is in `/etc/systemd/logind.conf`:
 
-    HandleLidSwitch=ignore
+```ini
+HandleLidSwitch=ignore
+```
 
 In order for this change to take effect, the `logind` service must be
 restarted:
 
-    systemctl restart systemd-logind
+```sh
+systemctl restart systemd-logind
+```
 
 More information on power management with systemd can be found on the
 [Arch Linux Wiki][archpm].
@@ -53,24 +57,28 @@ In my case, I wanted to have my server suspend itself every day at 3 AM
 (I'm usually in bed by this time). To do this, I created
 `/etc/systemd/system/auto-suspend.timer`:
 
-    [Unit]
-    Description=Automatically suspend on a schedule
+```ini
+[Unit]
+Description=Automatically suspend on a schedule
 
-    [Timer]
-    OnCalendar=*-*-* 03:00:00
+[Timer]
+OnCalendar=*-*-* 03:00:00
 
-    [Install]
-    WantedBy=timers.target
+[Install]
+WantedBy=timers.target
+```
 
 By default, a timer will invoke a service by the same name when
 triggered, so I created `/etc/systemd/system/auto-suspend.service`:
 
-    [Unit]
-    Description=Suspend
+```ini
+[Unit]
+Description=Suspend
 
-    [Service]
-    Type=oneshot
-    ExecStart=/usr/bin/systemctl suspend
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl suspend
+```
 
 The service simply runs the systemd command to suspend the computer. I
 imagine there might be a better way to do it, but this way works fine.
@@ -82,25 +90,29 @@ system when triggered, with the `WakeSystem` option. I wanted my server
 to resume at 6:30 PM, around the time I usually get home, so I created
 `/etc/systemd/system/auto-resume.timer`:
 
-    [Unit]
-    Description=Automatically resume on a schedule
+```ini
+[Unit]
+Description=Automatically resume on a schedule
 
-    [Timer]
-    OnCalendar=*-*-* 18:30:00
-    WakeSystem=true
+[Timer]
+OnCalendar=*-*-* 18:30:00
+WakeSystem=true
 
-    [Install]
-    WantedBy=timers.target
+[Install]
+WantedBy=timers.target
+```
 
 This should do it, but the timer still wants to invoke a service, so I
 created a no-op in `/etc/systemd/system/auto-resume.service`:
 
-    [Unit]
-    Description=Does nothing
+```ini
+[Unit]
+Description=Does nothing
 
-    [Service]
-    Type=oneshot
-    ExecStart=/bin/true
+[Service]
+Type=oneshot
+ExecStart=/bin/true
+```
 
 Once again, there is likely a better way to achieve this, but I am no
 systemd expert.
@@ -117,11 +129,13 @@ information.
 
 To turn these timers on, enable and start them:
 
-    systemctl enable auto-suspend.timer
-    systemctl start auto-suspend.timer
+```sh
+systemctl enable auto-suspend.timer
+systemctl start auto-suspend.timer
 
-    systemctl enable auto-resume.timer
-    systemctl start auto-resume.timer
+systemctl enable auto-resume.timer
+systemctl start auto-resume.timer
+```
 
 Now my Lenovo sits on a shelf with the lid closed, only fully powered on
 and serving files for 8.5 hours of the day instead of 24.
