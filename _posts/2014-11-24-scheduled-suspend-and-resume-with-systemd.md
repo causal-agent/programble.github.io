@@ -132,3 +132,10 @@ I haven't quite figured out how to change the suspend/resume schedule on
 weekends, when I spend more time at home. I'm sure I just need to read a
 bit more on [systemd Calendar Events][events], but it's not the weekend
 yet, so I'll worry about it later.
+
+*Update 2015-05-31:*
+
+To have different schedules on weekends and weekdays, I created two `.timer`
+files with `WakeSystem=true`, and prefixed the `OnCalendar` value of one with
+`Mon,Tue,Wed,Thu,Fri`, and the other with `Sat,Sun`. The same can be done for
+suspend. Remember to enable and start all timers.
