@@ -1,3 +1,11 @@
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - smart
+    - strikethrough
+    - superscript
+    - tables
+
 name: Curtis McEnroe
 email: curtis@cmcenroe.me
 domain: cmcenroe.me
