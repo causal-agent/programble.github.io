@@ -10,11 +10,11 @@ knuckles, but these didn't satisfy me. I wondered if there was a
 mathematical formula for the problem, and upon not immediately finding
 one, I challenged myself to create one.
 
-<del>Put more formally</del> In other words, the challenge was this:
-find a function <i class="formula">f</i>, such that
-<i class="formula">f(x)</i> is equal to the number of days in month
-<i class="formula">x</i>, represented by the integers 1 through 12. Or,
-as a table of values:<sup>1</sup>
+~~Put more formally~~ In other words, the challenge was this:
+find a function <var>f</var>, such that
+<var>f(x)</var> is equal to the number of days in month
+<var>x</var>, represented by the integers 1 through 12. Or,
+as a table of values:^1
 
 <div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
   <div class="table-responsive"><table class="table table-bordered tov">
@@ -48,7 +48,7 @@ solving the problem: floor division and modulo.
 Floor division is the operation performed by many programming languages
 when dividing two integer numbers, that is, the result of the division
 is truncated to the integer part. I will represent floor division as
-<span class="formula">&lfloor;<sup><i>a</i></sup>&frasl;<sub><i>b</i></sub>&rfloor;</span>,
+<span class="formula">&lfloor;<sup><var>a</var></sup>&frasl;<sub><var>b</var></sub>&rfloor;</span>,
 for example:
 
 <p class="formula">
@@ -57,7 +57,7 @@ for example:
 
 Modulo is an operation that results in the remainder of a division. It
 is represented in many programming languages with the `%` operator. I
-will represent it as <span class="formula"><i>a</i> mod <i>b</i></span>,
+will represent it as <span class="formula"><var>a</var> mod <var>b</var></span>,
 for example:
 
 <p class="formula">
@@ -68,13 +68,13 @@ Note that modulo has the same precedence as division.
 
 ## The Basics
 
-With those tools in mind, let's get a basic pattern going.<sup>2</sup> Months
+With those tools in mind, let's get a basic pattern going.^2 Months
 usually alternate between lengths of 30 and 31 days. We can use
-<span class="formula"><i>x</i> mod 2</span> to get an alternating
+<span class="formula"><var>x</var> mod 2</span> to get an alternating
 pattern of 1 and 0, then just add our constant base number of days:
 
 <p class="formula">
-  <i>f(x)</i> = 30 + <i>x</i> mod 2
+  <var>f(x)</var> = 30 + <var>x</var> mod 2
 </p>
 
 <div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
@@ -109,7 +109,7 @@ To obtain an inverse pattern of alternating 0 and 1, we can add 1 to our
 dividend:
 
 <p class="formula">
-  <i>f(x)</i> = 30 + (<i>x</i> + 1) mod 2
+  <var>f(x)</var> = 30 + (<var>x</var> + 1) mod 2
 </p>
 
 <div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
@@ -152,7 +152,7 @@ its domain. I've called this "masking," since it involves creating a
 sort of bit-mask.
 
 To mask the latter piece of our function, we need an expression equal to
-1 where <span class="formula">8 &le; <i>x</i> &le; 12</span>. Floor
+1 where <span class="formula">8 &le; <var>x</var> &le; 12</span>. Floor
 division by 8 is perfect for this, since all our values are less than
 16.
 
@@ -176,11 +176,11 @@ division by 8 is perfect for this, since all our values are less than
 </div></div>
 
 Now if we substitute this expression in our
-<span class="formula"><i>x</i> + 1</span> dividend, we can invert the
+<span class="formula"><var>x</var> + 1</span> dividend, we can invert the
 pattern using our mask:
 
 <p class="formula">
-  <i>f(x)</i> = 30 + (<i>x</i> + &lfloor;<sup><i>x</i></sup>&frasl;<sub>8</sub>&rfloor;) mod 2
+  <var>f(x)</var> = 30 + (<var>x</var> + &lfloor;<sup><var>x</var></sup>&frasl;<sub>8</sub>&rfloor;) mod 2
 </p>
 
 <div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
@@ -211,12 +211,12 @@ Woot! Everything is correct except February. What a surprise.
 ## February
 
 Every month has either 30 or 31 days, but February has 28 (leap years
-are out of scope).<sup>3</sup> February currently has 30 days according
+are out of scope).^3 February currently has 30 days according
 to our formula, so an expression equal to 2 when
-<span class="formula"><i>x</i> = 2</span> would be ideal for subtraction.
+<span class="formula"><var>x</var> = 2</span> would be ideal for subtraction.
 
 The best I could come up with was
-<span class="formula">2 mod <i>x</i></span>, which gives us a sort of
+<span class="formula">2 mod <var>x</var></span>, which gives us a sort of
 mask over every month after February.
 
 <div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
@@ -242,7 +242,7 @@ With this, we'll need to change our base constant to 28 so that adding 2
 to the rest of the months will still be correct.
 
 <p class="formula">
-  <i>f(x)</i> = 28 + (<i>x</i> + &lfloor;<sup><i>x</i></sup>&frasl;<sub>8</sub>&rfloor;) mod 2 + 2 mod <i>x</i>
+  <var>f(x)</var> = 28 + (<var>x</var> + &lfloor;<sup><var>x</var></sup>&frasl;<sub>8</sub>&rfloor;) mod 2 + 2 mod <var>x</var>
 </p>
 
 <div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
@@ -270,11 +270,11 @@ to the rest of the months will still be correct.
 
 Unfortunately, January is now 2 days short. Luckily, finding an
 expression that will apply to only the first month is easy: floored
-inverse of <i class="formula">x</i>. Now just multiply that by 2 and we
+inverse of <var>x</var>. Now just multiply that by 2 and we
 get the final formula:
 
 <p class="formula">
-  <i>f(x)</i> = 28 + (<i>x</i> + &lfloor;<sup><i>x</i></sup>&frasl;<sub>8</sub>&rfloor;) mod 2 + 2 mod <i>x</i> + 2 &lfloor;<sup>1</sup>&frasl;<sub><i>x</i></sub>&rfloor;
+  <var>f(x)</var> = 28 + (<var>x</var> + &lfloor;<sup><var>x</var></sup>&frasl;<sub>8</sub>&rfloor;) mod 2 + 2 mod <var>x</var> + 2 &lfloor;<sup>1</sup>&frasl;<sub><var>x</var></sub>&rfloor;
 </p>
 
 <div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
@@ -308,10 +308,12 @@ use this?*
 There you have it, a formula for the number of days in each month using
 simple arithmetic. So next time you find yourself wondering how many
 days are in September, just remember to apply
-<span class="formula"><i>f</i>(9)</span>. For ease of use, here's a JavaScript
-one-liner:
+<span class="formula"><var>f</var>(9)</span>. For ease of use, here's a
+JavaScript one-liner:
 
-    function f(x) { return 28 + (x + Math.floor(x/8)) % 2 + 2 % x + 2 * Math.floor(1/x); }
+```javascript
+function f(x) { return 28 + (x + Math.floor(x/8)) % 2 + 2 % x + 2 * Math.floor(1/x); }
+```
 
 1. Naturally, I didn't feel like using any of the mnemonics, so I looked
    this table up on the Internet.
