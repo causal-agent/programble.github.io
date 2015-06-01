@@ -1,8 +1,7 @@
 /* Rouge highlighter */
-.k, .kd { color: #f0ad4e; }
+.k, .kc, .kd { color: #f0ad4e; }
 .mi { color: #337ab7; }
 .na, .nt { color: #d9534f; }
-.nb { color: #337ab7; }
 .nb { color: #5bc0de; }
 .p { color: #777; }
 .s, .s1, .s2 { color: #5cb85c; }
