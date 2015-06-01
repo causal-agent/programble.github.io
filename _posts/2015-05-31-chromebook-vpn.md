@@ -286,13 +286,13 @@ as normal.
 
 ## tmux
 
-[tmux][tmux] is invaluable
-if you do a lot of work over SSH.
-I had never previously used it,
-but very quickly realized its importance.
-I create a configuration
-that very closely mimics VIM window management.
-It can be found in my [dotfiles][dotfiles] repository.
+I had never used [tmux][tmux] before,
+but it quickly became clear
+that it is an invaluable tool
+when doing work over SSH.
+I created a configuration
+that very closely mimics VIM window management,
+which can be found in my [dotfiles][dotfiles] repository.
 
 I also wrote some shell functions
 for quickly getting into tmux:
