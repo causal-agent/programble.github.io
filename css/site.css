@@ -1,6 +1,10 @@
 /* Rouge highlighter */
-.k { color: #f0ad4e; }
+.k, .kd { color: #f0ad4e; }
+.mi { color: #337ab7; }
 .na, .nt { color: #d9534f; }
+.nb { color: #337ab7; }
+.nb { color: #5bc0de; }
+.p { color: #777; }
 .s, .s1, .s2 { color: #5cb85c; }
 
 /* Footnotes */
@@ -11,12 +15,11 @@
 
 /* Formula and table-of-values formatting for days-in-month post */
 
-span.formula, i.formula {
+var, .formula {
   font-family: Georgia,serif;
 }
 
 p.formula {
-  font-family: Georgia,serif;
   font-size: 130%;
   text-align: center;
 }
