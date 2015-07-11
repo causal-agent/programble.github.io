@@ -233,6 +233,13 @@ projects:
 
   - name: Games
     items:
+      - name: Tetrasm
+        repo: programble/tetrasm
+        tech: [NASM]
+        year: 2015
+        icon: fa-gamepad
+        desc: Tetris for x86 in NASM
+
       - name: Bare Metal Tetris
         repo: programble/bare-metal-tetris
         tech: [C]
