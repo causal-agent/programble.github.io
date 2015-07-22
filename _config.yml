@@ -187,6 +187,13 @@ projects:
         icon: fa-database
         desc: SQL schema migration manager
 
+      - name: TypeNode
+        repo: programble/typenode
+        tech: [TypeScript]
+        year: 2015
+        icon: fa-tags
+        desc: TypeScript declarations for Node.js
+
       - name: Pult
         repo: programble/pult
         tech: [Node.js]
