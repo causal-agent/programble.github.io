@@ -46,6 +46,7 @@ resume:
         - Ruby
         - Clojure
         - Python
+        - x86 assembly
 
     - name: Frameworks
       items:
