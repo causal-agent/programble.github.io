@@ -23,6 +23,9 @@ div.flex-wrap {
   flex-wrap: wrap;
 }
 
+/* Index */
+figure.mugshot { max-width: 33%; }
+
 /* Projects page */
 div.project {
   width: 30ch;
