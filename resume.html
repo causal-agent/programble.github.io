@@ -1,31 +1,23 @@
 ---
 layout: default
 title: Résumé
-id: resume
 ---
 
-<div class="page-header">
-  <div class="pull-right hidden-print">
-    <a class="btn btn-primary"
-       href="resume.pdf"
-       target="_blank">
-      <i class="fa fa-download"></i> PDF
-    </a>
-  </div>
+<a class="float-right hidden-print" href="resume.pdf" target="_blank">
+  <i class="fa fa-download"></i> PDF
+</a>
 
-  <h3>Curtis McEnroe</h3>
-  <p>
-    <ul class="list-unstyled visible-print">
-      <li>{{ site.domain }}</li>
-      <li>{{ site.email }}</li>
-      <li>github.com/programble</li>
-    </ul>
-  </p>
-</div>
+<h2 class="visible-print">Curtis McEnroe</h2>
+
+<ul class="list-unstyled visible-print">
+  <li>{{ site.domain }}</li>
+  <li>{{ site.email }}</li>
+  <li>github.com/programble</li>
+</ul>
 
 <h3>Technical Experience</h3>
 
-<dl class="dl-horizontal">
+<dl>
   {% for category in site.resume.tech %}
     <dt>{{ category.name }}</dt>
     <dd>{{ category.items | join:', ' }}</dd>
