@@ -13,11 +13,14 @@ gravatar: ca0c9cb798fd7f80444740a4dbaef7b9
 
 nav:
   pages:
+    - name: Home
+      href: /
+
     - name: Projects
-      id: projects
+      href: /projects.html
 
     - name: Résumé
-      id: resume
+      href: /resume.html
 
   links:
     - name: GitHub
