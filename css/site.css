@@ -1,10 +1,9 @@
 /* Rouge highlighter */
-.k, .kc, .kd { color: #f0ad4e; }
-.mi { color: #337ab7; }
-.na, .nt { color: #d9534f; }
-.nb { color: #5bc0de; }
-.p { color: #777; }
-.s, .s1, .s2 { color: #5cb85c; }
+.k, .kc, .kd { color: #990; }
+.na, .nt { color: #900; }
+.nb, .mi { color: #009; }
+.p { color: #555; }
+.s, .s1, .s2 { color: #090; }
 
 /* Footnotes */
 .post-body ol:last-child {
