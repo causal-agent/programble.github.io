@@ -1,5 +1,24 @@
 nav a:visited { color: #00e; }
 
+.text-center { text-align: center; }
+
+div.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+
+div.flex-wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* Projects page */
+
+div.project {
+  width: 30ch;
+  padding-right: 1ch;
+}
+
 /* Rouge highlighter */
 .k, .kc, .kd { color: #770; }
 .na, .nt { color: #900; }
