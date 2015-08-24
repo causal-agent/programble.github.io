@@ -36,7 +36,7 @@ div.project {
 /* Footnotes */
 .post-body ol:last-child {
   padding-top: 2em;
-  font-size: 75%;
+  font-size: 0.85em;
 }
 
 /* Rouge highlighter */
