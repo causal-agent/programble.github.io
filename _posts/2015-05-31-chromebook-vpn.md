@@ -27,7 +27,7 @@ What I've settled on
 for now
 is a stack of OpenVPN, SSH and tmux.
 
-## Chrome Secure Shell
+### Chrome Secure Shell
 
 The built-in
 crosh shell of Chrome OS
@@ -51,7 +51,7 @@ is a more usable settings page.
 
 [secureshell]: https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo
 
-### Generating Keys
+#### Generating Keys
 
 Generating SSH keys
 for Secure Shell
@@ -73,7 +73,7 @@ on my Chromebook.
 They can then be imported
 from the Secure Shell connection dialog.
 
-### Colours
+#### Colours
 
 Secure Shell works great,
 but the default colour scheme
@@ -103,7 +103,7 @@ and `foreground-color` and `cursor-color` both to `#ebdbb2`.
 [gruvbox]: https://github.com/morhetz/gruvbox-generalized
 [xresources]: https://github.com/morhetz/gruvbox-generalized/blob/master/xresources/gruvbox-dark.xresources
 
-## Dynamic DNS
+### Dynamic DNS
 
 In order to easily access
 my home server from anywhere,
@@ -154,7 +154,7 @@ sudo systemctl enable ddclient
 sudo systemctl start ddclient
 ```
 
-## OpenVPN Server
+### OpenVPN Server
 
 In order to access my home server securely
 from anywhere,
@@ -181,7 +181,7 @@ using this option in `/etc/openvpn/server.conf`:
 push "dhcp-option DNS 8.8.8.8"
 ```
 
-## Chrome OS & OpenVPN
+### Chrome OS & OpenVPN
 
 Although the Chrome OS "Private Network" interface
 in Settings supports OpenVPN,
@@ -284,7 +284,7 @@ I also made sure I could connect
 to everything else
 as normal.
 
-## tmux
+### tmux
 
 I had never used [tmux][tmux] before,
 but it quickly became clear
@@ -305,16 +305,14 @@ ta() { [ -n "$1" ] && tmux attach -t "$1" || tmux attach }
 [tmux]: http://tmux.sourceforge.net/
 [dotfiles]: https://github.com/programble/dotfiles/blob/master/.tmux.conf
 
-## End Result
+### End Result
 
 Here is me editing this post on my Chromebook,
 with OpenVPN, SSH, tmux, VIM and zsh:
 
-<a href="/image/chromebook-tmux.png">
-  <img class="img-responsive" alt="Screenshot" src="/image/chromebook-tmux.png">
-</a>
+[![Screenshot](/image/chromebook-tmux.png)](/image/chromebook-tmux.png)
 
-## Bonus: OpenVPN & iPhone
+### Bonus: OpenVPN & iPhone
 
 I also wanted to be able
 to SSH into my home server
@@ -382,10 +380,4 @@ from the Mail app.
 
 This is what the end result looks like on iPhone:
 
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-    <a href="/image/iphone-tmux.png">
-      <img class="img-responsive" alt="Screenshot" src="/image/iphone-tmux.png">
-    </a>
-  </div>
-</div>
+[![Screenshot](/image/iphone-tmux.png)](/image/iphone-tmux.png)

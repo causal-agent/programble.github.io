@@ -15,7 +15,7 @@ time. I set out to automate this.
 
  [u410]: http://shop.lenovo.com/us/en/laptops/ideapad/u-series/u410/
 
-## Ignoring Lid Close
+### Ignoring Lid Close
 
 The first step to automating the suspend/resume cycle is something I had
 already configured earlier, which is disabling automatic suspend when
@@ -41,7 +41,7 @@ More information on power management with systemd can be found on the
  [systemd]: http://freedesktop.org/wiki/Software/systemd/
  [archpm]: https://wiki.archlinux.org/index.php/Shutdown_Pressing_Power_Button#Power_management_with_systemd
 
-## systemd Timers
+### systemd Timers
 
 systemd has a [timer system][timers] that can be used to invoke systemd
 services similarly to cron. The `OnCalendar` option of timers can be
@@ -51,7 +51,7 @@ rule][events].
  [timers]: http://www.freedesktop.org/software/systemd/man/systemd.timer.html
  [events]: http://www.freedesktop.org/software/systemd/man/systemd.time.html#Calendar%20Events
 
-### Suspend
+#### Suspend
 
 In my case, I wanted to have my server suspend itself every day at 3 AM
 (I'm usually in bed by this time). To do this, I created
@@ -83,7 +83,7 @@ ExecStart=/usr/bin/systemctl suspend
 The service simply runs the systemd command to suspend the computer. I
 imagine there might be a better way to do it, but this way works fine.
 
-### Resume
+#### Resume
 
 Another handy feature of systemd timers is the ability to wake the
 system when triggered, with the `WakeSystem` option. I wanted my server
@@ -125,7 +125,7 @@ information.
  [unitless-mail]: https://www.mail-archive.com/systemd-devel@lists.freedesktop.org/msg23910.html
  [unitless-commit]: https://github.com/systemd/systemd/commit/8483d73ff158ee0d51ccbba09a470cc6ae9b071a
 
-### Make it Go
+#### Make it Go
 
 To turn these timers on, enable and start them:
 
@@ -140,7 +140,7 @@ systemctl start auto-resume.timer
 Now my Lenovo sits on a shelf with the lid closed, only fully powered on
 and serving files for 8.5 hours of the day instead of 24.
 
-## Caveats
+### Caveats
 
 I haven't quite figured out how to change the suspend/resume schedule on
 weekends, when I spend more time at home. I'm sure I just need to read a

@@ -1,9 +1,9 @@
 ---
-layout: narrow
+layout: default
 title: Gear
 ---
 
-# Gear
+## Gear
 
 - MacBook Pro 13.3" with Retina Display (July 2014)
   - 2.6 GHz Intel Core i5

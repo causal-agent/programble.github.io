@@ -1,36 +1,28 @@
 ---
 layout: default
 title: Projects
-id: projects
 ---
 
-<div class="page-header">
-  <h1>Projects</h1>
-</div>
+<h2 class="text-center">Projects</h2>
 
-<div class="row">
-  {% for category in site.projects %}
-    <div class="col-md-4 col-sm-6">
-      <h2>{{ category.name }}</h2>
+{% for category in site.projects %}
+  <h3>{{ category.name }}</h3>
 
-      {% for project in category.items %}
-        <h3>
+  <div class="flex flex-wrap">
+    {% for project in category.items %}
+      <div class="project">
+        <h4>
           <small><i class="fa {{ project.icon }}"></i></small>
           <a href="https://github.com/{{ project.repo }}">{{ project.name }}</a>
-          <small>
-            {% if project.tech %}
-              {{ project.tech | join:', ' }},
-            {% endif %}
-            <small>{{ project.year }}</small>
-          </small>
-        </h3>
+        </h4>
+        <small>
+          {% if project.tech %}
+            {{ project.tech | join:', ' }},
+          {% endif %}
+          {{ project.year }}
+        </small>
         <p>{{ project.desc }}</p>
-      {% endfor %}
-
-    </div>
-
-    <div class="clearfix {% cycle 'hidden', 'visible-sm' %}"></div>
-    <div class="clearfix {% cycle 'hidden', 'hidden', 'visible-md visible-lg' %}">
-    </div>
-  {% endfor %}
-</div>
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}

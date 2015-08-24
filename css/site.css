@@ -1,34 +1,56 @@
-/* Rouge highlighter */
-.k, .kc, .kd { color: #f0ad4e; }
-.mi { color: #337ab7; }
-.na, .nt { color: #d9534f; }
-.nb { color: #5bc0de; }
-.p { color: #777; }
-.s, .s1, .s2 { color: #5cb85c; }
+/* General reusable stuff (from Bootstrap) */
+.text-center { text-align: center; }
+.float-right { float: right; }
+.list-unstyled { padding: 0; }
+.list-unstyled li { list-style-type: none; }
+
+/* Print styles, for resume PDF */
+@media print {
+  body > header { display: none; }
+  .hidden-print { display: none; }
+}
+@media screen {
+  .visible-print { display: none; }
+}
+
+/* Flex */
+div.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+div.flex-wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* Index */
+figure.mugshot { max-width: 33%; }
+
+/* Projects page */
+div.project {
+  width: 30ch;
+  padding-right: 1ch;
+}
 
 /* Footnotes */
 .post-body ol:last-child {
-  padding-top: 20px;
+  padding-top: 2em;
   font-size: 75%;
 }
 
-/* Formula and table-of-values formatting for days-in-month post */
+/* Rouge highlighter */
+.na, .nt     { color: #900; }
+.s, .s1, .s2 { color: #090; }
+.nb, .mi     { color: #009; }
+.k, .kc, .kd { color: #770; }
+.p           { color: #555; }
 
-var, .formula {
-  font-family: Georgia,serif;
-}
-
-p.formula {
-  font-size: 130%;
-  text-align: center;
-}
-
-table.tov {
-  font-family: Georgia,serif;
-  text-align: right;
-}
-
+/* Days-in-month formula post */
+p.formula { text-align: center; }
+table.tov { text-align: right; }
 table.tov th {
   font-weight: normal;
-  border-right-width: 2px !important;
+  border-right-width: 2px;
 }
+table.tov td.y { background-color: #9e9; }
+table.tov td.n { background-color: #e99; }

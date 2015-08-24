@@ -10,46 +10,38 @@ knuckles, but these didn't satisfy me. I wondered if there was a
 mathematical formula for the problem, and upon not immediately finding
 one, I challenged myself to create one.
 
-~~Put more formally~~ In other words, the challenge was this:
-find a function <var>f</var>, such that
-<var>f(x)</var> is equal to the number of days in month
-<var>x</var>, represented by the integers 1 through 12. Or,
-as a table of values:^1
+In other words, the challenge was this: find a function <var>f</var>, such that
+<var>f(x)</var> is equal to the number of days in month <var>x</var>,
+represented by the integers 1 through 12. Or, as a table of values:^1
 
-<div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-  <div class="table-responsive"><table class="table table-bordered tov">
-    <thead>
-      <tr>
-        <th><i>x</i></th>
-        <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
-        <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th><i>f(x)</i></th>
-        <td>31</td> <td>28</td> <td>31</td> <td>30</td> <td>31</td> <td>30</td>
-        <td>31</td> <td>31</td> <td>30</td> <td>31</td> <td>30</td> <td>31</td>
-      </tr>
-    </tbody>
-  </table></div>
-</div></div>
+<table class="tov">
+  <tr>
+    <th><i>x</i></th>
+    <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+    <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
+  </tr>
+  <tr>
+    <th><i>f(x)</i></th>
+    <td>31</td> <td>28</td> <td>31</td> <td>30</td> <td>31</td> <td>30</td>
+    <td>31</td> <td>31</td> <td>30</td> <td>31</td> <td>30</td> <td>31</td>
+  </tr>
+</table>
 
 If you want to give this challenge a go before reading my solution, now
 is your chance. If you'd rather see my complete solution right away,
 scroll to the bottom of the page. What follows is my process for solving
 the problem.
 
-## The Tools
+### The Tools
 
 Firstly, here's a quick refresher on two operations I found vital to
 solving the problem: floor division and modulo.
 
-Floor division is the operation performed by many programming languages
-when dividing two integer numbers, that is, the result of the division
-is truncated to the integer part. I will represent floor division as
-<span class="formula">&lfloor;<sup><var>a</var></sup>&frasl;<sub><var>b</var></sub>&rfloor;</span>,
-for example:
+Floor division is the operation performed by many programming languages when
+dividing two integer numbers, that is, the result of the division is truncated
+to the integer part. I will represent floor division as
+&lfloor;<sup><var>a</var></sup>&frasl;<sub><var>b</var></sub>&rfloor;, for
+example:
 
 <p class="formula">
   &lfloor;<sup>5</sup>&frasl;<sub>3</sub>&rfloor; = 1
@@ -57,7 +49,7 @@ for example:
 
 Modulo is an operation that results in the remainder of a division. It
 is represented in many programming languages with the `%` operator. I
-will represent it as <span class="formula"><var>a</var> mod <var>b</var></span>,
+will represent it as "<var>a</var> mod <var>b</var>",
 for example:
 
 <p class="formula">
@@ -66,39 +58,33 @@ for example:
 
 Note that modulo has the same precedence as division.
 
-## The Basics
+### The Basics
 
-With those tools in mind, let's get a basic pattern going.^2 Months
-usually alternate between lengths of 30 and 31 days. We can use
-<span class="formula"><var>x</var> mod 2</span> to get an alternating
-pattern of 1 and 0, then just add our constant base number of days:
+With those tools in mind, let's get a basic pattern going.^2 Months usually
+alternate between lengths of 30 and 31 days. We can use <var>x</var> mod 2 to
+get an alternating pattern of 1 and 0, then just add our constant base number
+of days:
 
 <p class="formula">
   <var>f(x)</var> = 30 + <var>x</var> mod 2
 </p>
 
-<div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-  <div class="table-responsive"><table class="table table-bordered tov">
-    <thead>
-      <tr>
-        <th><i>x</i></th>
-        <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
-        <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th><i>f(x)</i></th>
-        <td class="success">31</td> <td class="danger">30</td>
-        <td class="success">31</td> <td class="success">30</td>
-        <td class="success">31</td> <td class="success">30</td>
-        <td class="success">31</td> <td class="danger">30</td>
-        <td class="danger">31</td>  <td class="danger">30</td>
-        <td class="danger">31</td>  <td class="danger">30</td>
-      </tr>
-    </tbody>
-  </table></div>
-</div></div>
+<table class="tov">
+  <tr>
+    <th><i>x</i></th>
+    <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+    <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
+  </tr>
+  <tr>
+    <th><i>f(x)</i></th>
+    <td class="y">31</td> <td class="n">30</td>
+    <td class="y">31</td> <td class="y">30</td>
+    <td class="y">31</td> <td class="y">30</td>
+    <td class="y">31</td> <td class="n">30</td>
+    <td class="n">31</td> <td class="n">30</td>
+    <td class="n">31</td> <td class="n">30</td>
+  </tr>
+</table>
 
 That's a pretty good start! We've already got January and March through
 July done. February is its own special problem we'll deal with later.
@@ -112,34 +98,28 @@ dividend:
   <var>f(x)</var> = 30 + (<var>x</var> + 1) mod 2
 </p>
 
-<div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-  <div class="table-responsive"><table class="table table-bordered tov">
-    <thead>
-      <tr>
-        <th><i>x</i></th>
-        <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
-        <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th><i>f(x)</i></th>
-        <td class="danger">30</td>  <td class="danger">31</td>
-        <td class="danger">30</td>  <td class="danger">31</td>
-        <td class="danger">30</td>  <td class="danger">31</td>
-        <td class="danger">30</td>  <td class="success">31</td>
-        <td class="success">30</td> <td class="success">31</td>
-        <td class="success">30</td> <td class="success">31</td>
-      </tr>
-    </tbody>
-  </table></div>
-</div></div>
+<table class="tov">
+  <tr>
+    <th><i>x</i></th>
+    <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+    <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
+  </tr>
+  <tr>
+    <th><i>f(x)</i></th>
+    <td class="n">30</td> <td class="n">31</td>
+    <td class="n">30</td> <td class="n">31</td>
+    <td class="n">30</td> <td class="n">31</td>
+    <td class="n">30</td> <td class="y">31</td>
+    <td class="y">30</td> <td class="y">31</td>
+    <td class="y">30</td> <td class="y">31</td>
+  </tr>
+</table>
 
 Now we have August through December right, but the rest of the year is
 wrong as expected. Let's see how we can combine combine our two
 formulas.
 
-## Masking
+### Masking
 
 What we need here is basically a piece-wise function, but that's just no
 fun. This got me thinking of other ways to use a part of a function only
@@ -152,91 +132,70 @@ its domain. I've called this "masking," since it involves creating a
 sort of bit-mask.
 
 To mask the latter piece of our function, we need an expression equal to
-1 where <span class="formula">8 &le; <var>x</var> &le; 12</span>. Floor
+1 where 8 &le; <var>x</var> &le; 12. Floor
 division by 8 is perfect for this, since all our values are less than
 16.
 
-<div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-  <div class="table-responsive"><table class="table table-bordered tov">
-    <thead>
-      <tr>
-        <th><i>x</i></th>
-        <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
-        <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>&lfloor;<sup><i>x</i></sup>&frasl;<sub>8</sub>&rfloor;</th>
-        <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td>
-        <td>0</td> <td>1</td> <td>1</td> <td>1</td> <td>1</td> <td>1</td>
-      </tr>
-    </tbody>
-  </table></div>
-</div></div>
+<table class="tov">
+    <tr>
+      <th><i>x</i></th>
+      <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+      <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
+    </tr>
+    <tr>
+      <th>&lfloor;<sup><i>x</i></sup>&frasl;<sub>8</sub>&rfloor;</th>
+      <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td> <td>0</td>
+      <td>0</td> <td>1</td> <td>1</td> <td>1</td> <td>1</td> <td>1</td>
+    </tr>
+</table>
 
-Now if we substitute this expression in our
-<span class="formula"><var>x</var> + 1</span> dividend, we can invert the
-pattern using our mask:
+Now if we substitute this expression in our <var>x</var> + 1 dividend, we can
+invert the pattern using our mask:
 
 <p class="formula">
   <var>f(x)</var> = 30 + (<var>x</var> + &lfloor;<sup><var>x</var></sup>&frasl;<sub>8</sub>&rfloor;) mod 2
 </p>
 
-<div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-  <div class="table-responsive"><table class="table table-bordered tov">
-    <thead>
-      <tr>
-        <th><i>x</i></th>
-        <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
-        <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th><i>f(x)</i></th>
-        <td class="success">31</td> <td class="danger">30</td>
-        <td class="success">31</td> <td class="success">30</td>
-        <td class="success">31</td> <td class="success">30</td>
-        <td class="success">31</td> <td class="success">31</td>
-        <td class="success">30</td> <td class="success">31</td>
-        <td class="success">30</td> <td class="success">31</td>
-      </tr>
-    </tbody>
-  </table></div>
-</div></div>
+<table class="tov">
+  <tr>
+    <th><i>x</i></th>
+    <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+    <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
+  </tr>
+  <tr>
+    <th><i>f(x)</i></th>
+    <td class="y">31</td> <td class="n">30</td>
+    <td class="y">31</td> <td class="y">30</td>
+    <td class="y">31</td> <td class="y">30</td>
+    <td class="y">31</td> <td class="y">31</td>
+    <td class="y">30</td> <td class="y">31</td>
+    <td class="y">30</td> <td class="y">31</td>
+  </tr>
+</table>
 
 Woot! Everything is correct except February. What a surprise.
 
-## February
+### February
 
-Every month has either 30 or 31 days, but February has 28 (leap years
-are out of scope).^3 February currently has 30 days according
-to our formula, so an expression equal to 2 when
-<span class="formula"><var>x</var> = 2</span> would be ideal for subtraction.
+Every month has either 30 or 31 days, but February has 28 (leap years are out
+of scope).^3 February currently has 30 days according to our formula, so an
+expression equal to 2 when <var>x</var> = 2 would be ideal for subtraction.
 
-The best I could come up with was
-<span class="formula">2 mod <var>x</var></span>, which gives us a sort of
+The best I could come up with was 2 mod <var>x</var>, which gives us a sort of
 mask over every month after February.
 
-<div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-  <div class="table-responsive"><table class="table table-bordered tov">
-    <thead>
-      <tr>
-        <th><i>x</i></th>
-        <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
-        <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>2 mod <i>x</i></th>
-        <td>0</td> <td>0</td> <td>2</td> <td>2</td> <td>2</td> <td>2</td>
-        <td>2</td> <td>2</td> <td>2</td> <td>2</td> <td>2</td> <td>2</td>
-      </tr>
-    </tbody>
-  </table></div>
-</div></div>
+<table class="tov">
+  <tr>
+    <th><i>x</i></th>
+    <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+    <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
+  </tr>
+  <tr>
+    <th>2 mod <i>x</i></th>
+    <td>0</td> <td>0</td> <td>2</td> <td>2</td> <td>2</td> <td>2</td>
+    <td>2</td> <td>2</td> <td>2</td> <td>2</td> <td>2</td> <td>2</td>
+  </tr>
+</table>
 
 With this, we'll need to change our base constant to 28 so that adding 2
 to the rest of the months will still be correct.
@@ -245,28 +204,22 @@ to the rest of the months will still be correct.
   <var>f(x)</var> = 28 + (<var>x</var> + &lfloor;<sup><var>x</var></sup>&frasl;<sub>8</sub>&rfloor;) mod 2 + 2 mod <var>x</var>
 </p>
 
-<div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-  <div class="table-responsive"><table class="table table-bordered tov">
-    <thead>
-      <tr>
-        <th><i>x</i></th>
-        <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
-        <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th><i>f(x)</i></th>
-        <td class="danger">29</td> <td class="success">28</td>
-        <td class="success">31</td> <td class="success">30</td>
-        <td class="success">31</td> <td class="success">30</td>
-        <td class="success">31</td> <td class="success">31</td>
-        <td class="success">30</td> <td class="success">31</td>
-        <td class="success">30</td> <td class="success">31</td>
-      </tr>
-    </tbody>
-  </table></div>
-</div></div>
+<table class="tov">
+  <tr>
+    <th><i>x</i></th>
+    <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+    <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
+  </tr>
+  <tr>
+    <th><i>f(x)</i></th>
+    <td class="n">29</td> <td class="y">28</td>
+    <td class="y">31</td> <td class="y">30</td>
+    <td class="y">31</td> <td class="y">30</td>
+    <td class="y">31</td> <td class="y">31</td>
+    <td class="y">30</td> <td class="y">31</td>
+    <td class="y">30</td> <td class="y">31</td>
+  </tr>
+</table>
 
 Unfortunately, January is now 2 days short. Luckily, finding an
 expression that will apply to only the first month is easy: floored
@@ -277,38 +230,33 @@ get the final formula:
   <var>f(x)</var> = 28 + (<var>x</var> + &lfloor;<sup><var>x</var></sup>&frasl;<sub>8</sub>&rfloor;) mod 2 + 2 mod <var>x</var> + 2 &lfloor;<sup>1</sup>&frasl;<sub><var>x</var></sub>&rfloor;
 </p>
 
-<div class="row"><div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-  <div class="table-responsive"><table class="table table-bordered tov">
-    <thead>
-      <tr>
-        <th><i>x</i></th>
-        <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
-        <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th><i>f(x)</i></th>
-        <td class="success">31</td> <td class="success">28</td>
-        <td class="success">31</td> <td class="success">30</td>
-        <td class="success">31</td> <td class="success">30</td>
-        <td class="success">31</td> <td class="success">31</td>
-        <td class="success">30</td> <td class="success">31</td>
-        <td class="success">30</td> <td class="success">31</td>
-      </tr>
-    </tbody>
-  </table></div>
-</div></div>
+<table class="tov">
+  <tr>
+    <th><i>x</i></th>
+    <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+    <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td>
+  </tr>
+  <tr>
+    <th><i>f(x)</i></th>
+    <td class="y">31</td> <td class="y">28</td>
+    <td class="y">31</td> <td class="y">30</td>
+    <td class="y">31</td> <td class="y">30</td>
+    <td class="y">31</td> <td class="y">31</td>
+    <td class="y">30</td> <td class="y">31</td>
+    <td class="y">30</td> <td class="y">31</td>
+  </tr>
+</table>
 
-## Conclusion
+### Conclusion
 
-*2014-12-06: Hello, Internet. This is tongue-in-cheek. Why would anyone
-use this?*
+<ins>
+<time datetime="2014-12-06">2014-12-06</time>: Hello, Internet. This is
+tongue-in-cheek. Why would anyone use this?
+</ins>
 
-There you have it, a formula for the number of days in each month using
-simple arithmetic. So next time you find yourself wondering how many
-days are in September, just remember to apply
-<span class="formula"><var>f</var>(9)</span>. For ease of use, here's a
+There you have it, a formula for the number of days in each month using simple
+arithmetic. So next time you find yourself wondering how many days are in
+September, just remember to apply <var>f</var>(9). For ease of use, here's a
 JavaScript one-liner:
 
 ```javascript
