@@ -138,20 +138,6 @@ projects:
         icon: fa-lock
         desc: Secure data storage API
 
-      - name: Listens.ws
-        repo: listens-ws
-        tech: [Node.js, PostgreSQL]
-        year: 2014
-        icon: fa-music
-        desc: Music listening history and statistics service
-
-      - name: Dirt
-        repo: programble/dirt
-        tech: [Ruby, Redis]
-        year: 2013
-        icon: fa-search
-        desc: Language detection service
-
   - name: Libraries
     items:
       - name: Errio
