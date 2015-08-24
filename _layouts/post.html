@@ -3,13 +3,11 @@ layout: default
 ---
 
 <h2>{{ page.title }}</h2>
-<p>
-  <small>
-    <time datetime="{{ page.date | date:'%Y-%m-%d' }}">
-      {{ page.date | date:'%A, %-d %B, %Y' }}
-    </time>
-  </small>
-</p>
+<small>
+  <time datetime="{{ page.date | date:'%Y-%m-%d' }}">
+    {{ page.date | date:'%A, %-d %B, %Y' }}
+  </time>
+</small>
 
 <section class="post-body">
   {{ content }}
