@@ -6,6 +6,7 @@
 
 /* Print styles, for resume PDF */
 @media print {
+  body { color: #000; }
   body > header { display: none; }
   .hidden-print { display: none; }
 }
