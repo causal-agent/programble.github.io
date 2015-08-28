@@ -198,6 +198,29 @@ projects:
         icon: fa-tags
         desc: TypeScript declarations for Node.js
 
+  - name: Games
+    items:
+      - name: Tetrasm
+        repo: programble/tetrasm
+        tech: [NASM]
+        year: 2015
+        icon: fa-gamepad
+        desc: Tetris for x86 in NASM
+
+      - name: Bare Metal Tetris
+        repo: programble/bare-metal-tetris
+        tech: [C]
+        year: 2014
+        icon: fa-gamepad
+        desc: Tetris for x86
+
+      - name: Letterwang
+        repo: programble/letterwang
+        tech: [Node.js, Socket.IO]
+        year: 2013
+        icon: fa-font
+        desc: Multiplayer word-spelling game
+
   - name: Experiments
     items:
       - name: Gury
@@ -227,29 +250,6 @@ projects:
         year: 2011
         icon: fa-keyboard-o
         desc: Keylogger for X
-
-  - name: Games
-    items:
-      - name: Tetrasm
-        repo: programble/tetrasm
-        tech: [NASM]
-        year: 2015
-        icon: fa-gamepad
-        desc: Tetris for x86 in NASM
-
-      - name: Bare Metal Tetris
-        repo: programble/bare-metal-tetris
-        tech: [C]
-        year: 2014
-        icon: fa-gamepad
-        desc: Tetris for x86
-
-      - name: Letterwang
-        repo: programble/letterwang
-        tech: [Node.js, Socket.IO]
-        year: 2013
-        icon: fa-font
-        desc: Multiplayer word-spelling game
 
   - name: Configuration
     items:
