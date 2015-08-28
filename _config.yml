@@ -177,13 +177,6 @@ projects:
         icon: fa-database
         desc: SQL schema migration manager
 
-      - name: TypeNode
-        repo: programble/typenode
-        tech: [TypeScript]
-        year: 2015
-        icon: fa-tags
-        desc: TypeScript declarations for Node.js
-
       - name: Pult
         repo: programble/pult
         tech: [Node.js]
@@ -197,6 +190,13 @@ projects:
         year: 2012–2013
         icon: fa-code
         desc: Clojure-like Lisp on Rubinius
+
+      - name: TypeNode
+        repo: programble/typenode
+        tech: [TypeScript]
+        year: 2015
+        icon: fa-tags
+        desc: TypeScript declarations for Node.js
 
   - name: Experiments
     items:
