@@ -136,7 +136,7 @@ projects:
         tech: [Clojure, MongoDB]
         year: 2013–2014
         icon: fa-paste
-        desc: '"The Reference Heap" pastebin'
+        desc: '“The Reference Heap” pastebin'
 
       - name: Sesame
         repo: busbud/sesame
