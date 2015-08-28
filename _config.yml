@@ -117,6 +117,13 @@ resume:
 projects:
   - name: Web
     items:
+      - name: Writ
+        repo: programble/writ
+        tech: [CSS]
+        year: 2015
+        icon: fa-align-left
+        desc: Opinionated, classless styles for semantic HTML
+
       - name: Discohands
         repo: busbud/discohands
         tech: [Node.js, MongoDB]
