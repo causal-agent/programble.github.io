@@ -138,13 +138,6 @@ projects:
         icon: fa-paste
         desc: '“The Reference Heap” pastebin'
 
-      - name: Sesame
-        repo: busbud/sesame
-        tech: [Node.js, PostgreSQL]
-        year: 2015
-        icon: fa-lock
-        desc: Secure data storage API
-
   - name: Libraries
     items:
       - name: Errio
