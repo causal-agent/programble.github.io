@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Chromebook as a Thin Client for Development
+discussions:
+  - site: Lobsters
+    href: https://lobste.rs/s/n7mpm0/chromebook_as_a_thin_client_for_development
 ---
 
 After handing in my MacBook Pro

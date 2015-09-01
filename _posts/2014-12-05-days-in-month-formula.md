@@ -1,6 +1,11 @@
 ---
 layout: post
 title: A Formula for the Number of Days in Each Month
+discussions:
+  - site: Lobsters
+    href: https://lobste.rs/s/sfjsxx/a_formula_for_the_number_of_days_in_each_month
+  - site: Hacker News
+    href: https://news.ycombinator.com/item?id=8705630
 ---
 
 Recently, after being awake for longer than I should have, I started
