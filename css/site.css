@@ -40,9 +40,9 @@ div.project {
 
 p.subtitle { margin-top: 0; }
 
-.post-body ol:last-child {
-  padding-top: 2em;
-  font-size: 0.85em;
+article ol:last-child {
+  margin-top: 3rem;
+  font-size: 0.833em;
 }
 
 /* Rouge highlighter */
