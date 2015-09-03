@@ -6,7 +6,11 @@
 
 /* Print styles, for resume PDF */
 @media print {
-  body { color: #000; }
+  html { font-size: 14px; }
+  body {
+    margin: 0;
+    color: #000;
+  }
   body > header { display: none; }
   .hidden-print { display: none; }
 }
@@ -36,9 +40,13 @@ div.project {
   padding-right: 1ch;
 }
 
+/* Resume */
+
+div.pdf-link { margin-top: 0.75rem; }
+
 /* Posts */
 
-p.subtitle { margin-top: 0; }
+.subtitle { margin-top: 0; }
 
 article ol:last-child {
   margin-top: 3rem;
