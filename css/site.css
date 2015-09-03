@@ -25,7 +25,10 @@ div.flex-wrap {
 }
 
 /* Index */
-figure.mugshot { max-width: 33%; }
+figure.mugshot {
+  max-width: 25%;
+  margin-top: 0;
+}
 
 /* Projects page */
 div.project {
