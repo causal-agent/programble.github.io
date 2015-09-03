@@ -10,6 +10,13 @@ layout: default
     </time>
   </small>
 </p>
+<nav class="discussions">
+  <ul>
+    {% for discussion in page.discussions %}
+      <li><a href="{{ discussion.href }}">{{ discussion.site }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
 
 <article>
   {{ content }}

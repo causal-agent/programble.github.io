@@ -48,6 +48,9 @@ div.pdf-link { margin-top: 0.75rem; }
 
 .subtitle { margin-top: 0; }
 
+nav.discussions { font-size: 0.833em; }
+nav.discussions ul { margin-top: 0; }
+
 article ol:last-child {
   margin-top: 3rem;
   font-size: 0.833em;
