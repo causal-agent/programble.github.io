@@ -254,10 +254,12 @@ get the final formula:
 
 ### Conclusion
 
-<ins>
-<time datetime="2014-12-06">2014-12-06</time>: Hello, Internet. This is
-tongue-in-cheek. Why would anyone use this?
-</ins>
+<p>
+  <ins>
+  <time datetime="2014-12-06">2014-12-06</time>: Hello, Internet. This is
+  tongue-in-cheek. Why would anyone use this?
+  </ins>
+</p>
 
 There you have it, a formula for the number of days in each month using simple
 arithmetic. So next time you find yourself wondering how many days are in
