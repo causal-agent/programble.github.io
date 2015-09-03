@@ -36,7 +36,10 @@ div.project {
   padding-right: 1ch;
 }
 
-/* Footnotes */
+/* Posts */
+
+p.subtitle { margin-top: 0; }
+
 .post-body ol:last-child {
   padding-top: 2em;
   font-size: 0.85em;
