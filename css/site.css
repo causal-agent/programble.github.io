@@ -6,7 +6,11 @@
 
 /* Print styles, for resume PDF */
 @media print {
-  body { color: #000; }
+  html { font-size: 14px; }
+  body {
+    margin: 0;
+    color: #000;
+  }
   body > header { display: none; }
   .hidden-print { display: none; }
 }
@@ -25,18 +29,31 @@ div.flex-wrap {
 }
 
 /* Index */
-figure.mugshot { max-width: 33%; }
+figure.mugshot {
+  max-width: 25%;
+  margin-top: 0;
+}
 
 /* Projects page */
 div.project {
-  width: 30ch;
+  width: 25ch;
   padding-right: 1ch;
 }
 
-/* Footnotes */
-.post-body ol:last-child {
-  padding-top: 2em;
-  font-size: 0.85em;
+/* Resume */
+
+div.pdf-link { margin-top: 0.75rem; }
+
+/* Posts */
+
+.subtitle { margin-top: 0; }
+
+nav.discussions { font-size: 0.833em; }
+nav.discussions ul { margin-top: 0; }
+
+article ol:last-child {
+  margin-top: 3rem;
+  font-size: 0.833em;
 }
 
 /* Rouge highlighter */

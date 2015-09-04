@@ -15,13 +15,15 @@ title: Projects
           <small><i class="fa {{ project.icon }}"></i></small>
           <a href="https://github.com/{{ project.repo }}">{{ project.name }}</a>
         </h4>
-        <small>
-          {% if project.tech %}
-            {{ project.tech | join:', ' }},
-          {% endif %}
-          {{ project.year }}
-        </small>
-        <p>{{ project.desc }}</p>
+        <p class="subtitle">
+          <small>
+            {% if project.tech %}
+              {{ project.tech | join:', ' }},
+            {% endif %}
+            {{ project.year }}
+          </small>
+        </p>
+        <p class="subtitle">{{ project.desc }}</p>
       </div>
     {% endfor %}
   </div>

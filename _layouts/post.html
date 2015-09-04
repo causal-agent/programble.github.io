@@ -3,12 +3,21 @@ layout: default
 ---
 
 <h2>{{ page.title }}</h2>
-<small>
-  <time datetime="{{ page.date | date:'%Y-%m-%d' }}">
-    {{ page.date | date:'%A, %-d %B, %Y' }}
-  </time>
-</small>
+<p class="subtitle">
+  <small>
+    <time datetime="{{ page.date | date:'%Y-%m-%d' }}">
+      {{ page.date | date:'%A, %-d %B, %Y' }}
+    </time>
+  </small>
+</p>
+<nav class="discussions">
+  <ul>
+    {% for discussion in page.discussions %}
+      <li><a href="{{ discussion.href }}">{{ discussion.site }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
 
-<section class="post-body">
+<article>
   {{ content }}
-</section>
+</article>
