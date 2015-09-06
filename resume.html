@@ -1,6 +1,81 @@
 ---
 layout: default
 title: Résumé
+
+resume:
+  tech:
+    - name: Languages
+      items:
+        - JavaScript
+        - TypeScript
+        - C
+        - Ruby
+        - Clojure
+        - Python
+        - x86 assembly
+
+    - name: Frameworks
+      items:
+        - Node.js / io.js
+        - Express
+        - Sinatra
+
+    - name: Datastores
+      items:
+        - PostgreSQL
+        - MongoDB
+        - Redis
+
+    - name: Tools & Platforms
+      items:
+        - Git
+        - GitHub
+        - Heroku
+        - AWS
+        - Digital Ocean
+
+    - name: Systems
+      items:
+        - OS X
+        - Ubuntu
+        - Arch Linux
+
+  work:
+    - title: Software Developer
+      company: Busbud
+      location: Montréal, Québec, Canada
+      start: December 2013
+      end: April 2015
+      stack: [Node.js, Express, PostgreSQL, Redis, Heroku, AWS]
+      doings:
+        - Migrated, designed, and optimized data models
+        - Developed efficient APIs for accessing and interacting with Busbud's data
+        - Implemented models, abstractions and adapters for interacting with partners' APIs
+        - Performed PostgreSQL database maintenance
+
+  education:
+    - program: Computer Science Technology
+      school: Dawson College
+      start: 2013
+      end: 2013
+
+    - program: Pure and Applied Science
+      school: Dawson College
+      start: 2012
+      end: 2013
+
+    - school: Howard S. Billings Regional High School
+      start: 2007
+      end: 2012
+
+  awards:
+    - name: Physics Award
+      school: Howard S. Billings Regional High School
+      year: 2012
+
+    - name: Academic Honour Roll
+      school: Howard S. Billings Regional High School
+      year: 2007–2012
 ---
 
 <div class="pdf-link float-right hidden-print">
@@ -20,7 +95,7 @@ title: Résumé
 <h3>Technical Experience</h3>
 
 <dl>
-  {% for category in site.resume.tech %}
+  {% for category in page.resume.tech %}
     <dt>{{ category.name }}</dt>
     <dd>{{ category.items | join:', ' }}</dd>
   {% endfor %}
@@ -28,7 +103,7 @@ title: Résumé
 
 <h3>Work Experience</h3>
 
-{% for job in site.resume.work %}
+{% for job in page.resume.work %}
   <h4>
     {{ job.title }}, {{ job.start }} – {{ job.end }}
     <br>
@@ -45,7 +120,7 @@ title: Résumé
 <h3>Education</h3>
 
 <ol class="list-unstyled">
-  {% for education in site.resume.education %}
+  {% for education in page.resume.education %}
     <li>
       {% if education.program %}
         {{ education.program }},
@@ -59,7 +134,7 @@ title: Résumé
 <h3>Honours and Awards</h3>
 
 <ol class="list-unstyled">
-  {% for award in site.resume.awards %}
+  {% for award in page.resume.awards %}
     <li>{{ award.name }}, {{ award.school }}, {{ award.year }}</li>
   {% endfor %}
 </ol>
