@@ -5,6 +5,8 @@ redcarpet:
     - strikethrough
     - superscript
     - tables
+gems:
+  - jekyll-feed
 
 name: Curtis McEnroe
 email: curtis@cmcenroe.me
