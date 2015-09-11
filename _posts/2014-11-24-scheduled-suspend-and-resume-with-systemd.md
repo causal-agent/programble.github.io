@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Scheduled Suspend and Resume With systemd
 ---
 

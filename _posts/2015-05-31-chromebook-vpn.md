@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Chromebook as a Thin Client for Development
 discussions:
   - site: Lobsters

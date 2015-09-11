@@ -1,5 +1,4 @@
 ---
-layout: post
 title: A Formula for the Number of Days in Each Month
 discussions:
   - site: Lobsters
