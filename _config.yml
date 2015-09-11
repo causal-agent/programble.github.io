@@ -5,6 +5,7 @@ redcarpet:
     - strikethrough
     - superscript
     - tables
+    - with_toc_data
 gems:
   - jekyll-feed
   - jemoji
