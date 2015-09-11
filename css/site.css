@@ -59,11 +59,12 @@ div.footnotes ol li p {
 }
 
 /* Rouge highlighter */
-.na, .nt     { color: #900; }
-.s, .s1, .s2 { color: #090; }
-.nb, .mi     { color: #009; }
-.k, .kc, .kd { color: #770; }
-.p           { color: #555; }
+.na, .nt, .nf     { color: #900; }
+.s, .s1, .s2      { color: #090; }
+.nb, .mi          { color: #009; }
+.cp               { color: #599; }
+.k, .kc, .kd, .kt { color: #770; }
+.p, .c1           { color: #555; }
 
 /* Days-in-month formula post */
 p.formula { text-align: center; }
@@ -74,3 +75,10 @@ table.tov th {
 }
 table.tov td.y { background-color: #9e9; }
 table.tov td.n { background-color: #e99; }
+
+/* Tetrasm post */
+
+table.memory code {
+  background-color: transparent;
+  border: none;
+}
