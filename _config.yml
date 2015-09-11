@@ -6,6 +6,7 @@ redcarpet:
     - superscript
     - tables
     - with_toc_data
+    - footnotes
 gems:
   - jekyll-feed
   - jemoji

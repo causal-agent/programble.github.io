@@ -17,7 +17,10 @@ one, I challenged myself to create one.
 
 In other words, the challenge was this: find a function <var>f</var>, such that
 <var>f(x)</var> is equal to the number of days in month <var>x</var>,
-represented by the integers 1 through 12. Or, as a table of values:^1
+represented by the integers 1 through 12. Or, as a table of values:[^1]
+
+[^1]: Naturally, I didn't feel like using any of the mnemonics, so I looked
+      this table up on the Internet.
 
 <table class="tov">
   <tr>
@@ -65,10 +68,12 @@ Note that modulo has the same precedence as division.
 
 ### The Basics
 
-With those tools in mind, let's get a basic pattern going.^2 Months usually
+With those tools in mind, let's get a basic pattern going.[^2] Months usually
 alternate between lengths of 30 and 31 days. We can use <var>x</var> mod 2 to
 get an alternating pattern of 1 and 0, then just add our constant base number
 of days:
+
+[^2]: "The Basics," or, "The Rule With Many Exceptions," like most rules.
 
 <p class="formula">
   <var>f(x)</var> = 30 + <var>x</var> mod 2
@@ -183,8 +188,14 @@ Woot! Everything is correct except February. What a surprise.
 ### February
 
 Every month has either 30 or 31 days, but February has 28 (leap years are out
-of scope).^3 February currently has 30 days according to our formula, so an
+of scope).[^3] February currently has 30 days according to our formula, so an
 expression equal to 2 when <var>x</var> = 2 would be ideal for subtraction.
+
+[^3]: February was originally the last month of the year in the Roman
+      calendar, so it actually makes more sense than it seems for it to be
+      shorter than the others. It also makes more sense that its length
+      would vary, since adding or removing a day from the end of the year
+      is more intuitive.
 
 The best I could come up with was 2 mod <var>x</var>, which gives us a sort of
 mask over every month after February.
@@ -270,11 +281,3 @@ JavaScript one-liner:
 function f(x) { return 28 + (x + Math.floor(x/8)) % 2 + 2 % x + 2 * Math.floor(1/x); }
 ```
 
-1. Naturally, I didn't feel like using any of the mnemonics, so I looked
-   this table up on the Internet.
-2. "The Basics," or, "The Rule With Many Exceptions," like most rules.
-3. February was originally the last month of the year in the Roman
-   calendar, so it actually makes more sense than it seems for it to be
-   shorter than the others. It also makes more sense that its length
-   would vary, since adding or removing a day from the end of the year
-   is more intuitive.
