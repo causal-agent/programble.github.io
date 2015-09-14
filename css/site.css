@@ -61,7 +61,7 @@ div.footnotes ol li p {
 /* Rouge highlighter */
 .na, .nt, .nf     { color: #900; }
 .s, .s1, .s2      { color: #090; }
-.nb, .mi          { color: #009; }
+.nb, .mi, .mh     { color: #009; }
 .cp               { color: #599; }
 .k, .kc, .kd, .kt { color: #770; }
 .p, .c1           { color: #555; }
