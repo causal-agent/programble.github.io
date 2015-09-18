@@ -304,7 +304,7 @@ tn() { [ -n "$1" ] && tmux new -s "$1" || tmux new }
 ta() { [ -n "$1" ] && tmux attach -t "$1" || tmux attach }
 ```
 
-[tmux]: http://tmux.sourceforge.net/
+[tmux]: http://tmux.github.io/
 [dotfiles]: https://github.com/programble/dotfiles/blob/master/.tmux.conf
 
 ### End Result
