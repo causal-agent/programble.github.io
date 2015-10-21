@@ -13,4 +13,17 @@ title: Gear
 - Some small Logitech wireless mouse
 - Grado SR80
 - iPhone 6 16GB (space gray)
+
+---
+
 - HP Chromebook 11 (blue)
+- Lenovo IdeaPad U410
+  - 2.6 GHz Intel Core i5
+  - 8 GB 1600 MHz DDR3
+  - Intel HD Graphics 4000
+  - 32 GB flash storage
+  - 500 GB hard disk
+
+---
+
+- TP-LINK N600
