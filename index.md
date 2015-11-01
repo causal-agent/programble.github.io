@@ -5,9 +5,7 @@ layout: index
 Hi, I'm Curtis.
 I am a 20-year-old
 software developer
-from Montréal, Québec,
-currently available
-for hire.
+from Montréal, Québec.
 
 I'm interested
 in building web APIs
