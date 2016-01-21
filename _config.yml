@@ -7,6 +7,7 @@ redcarpet:
     - tables
     - with_toc_data
     - footnotes
+highlighter: pygments
 gems:
   - jekyll-feed
   - jemoji
