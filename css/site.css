@@ -27,6 +27,9 @@ div.flex-wrap {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+div.flex-center {
+  justify-content: center;
+}
 
 /* Index */
 figure.mugshot {
@@ -43,6 +46,10 @@ div.project {
 /* Resume */
 
 div.pdf-link { margin-top: 0.75rem; }
+
+/* Records */
+
+a.record { height: 200px; }
 
 /* Posts */
 
