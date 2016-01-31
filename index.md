@@ -2,41 +2,36 @@
 layout: index
 ---
 
-Hi, I'm Curtis.
-I am a 20-year-old
-software developer
+Hi, I'm Curtis,
+a software developer
 from Montréal, Québec.
+I work at [AdGear][adgear].
+
+[adgear]: http://adgear.com
 
 I'm interested
-in building web APIs
+in building APIs
 and working with relational databases,
-as well as creating tools
-for developers.
+as well as creating
+development tooling.
 
 I enjoy working on
 hobby [projects](projects.html)
-and contributing to open-source software.
-All of my personal work
-can be found on [GitHub][github].
-These days I'm mostly working with
-Node.js or C
-on OS X or Arch Linux.
+and contributing to open-source software
+on [GitHub][github].
+I'm currently interested in
+working with [Rust][rust].
 
 [github]: https://github.com/programble
+[rust]: https://www.rust-lang.org
 
-My main interest
-after software development
-is (listening to) music.
-I collect [records][discogs] ([for nerds][records]),
-mainly consisting of local post-rock,
-such as
+After software,
+my main interest is (listening to) music.
+I collect [records](records.html),
+many from local post-rock groups such as
 *Godspeed You! Black Emperor*
 and *Thee Silver Mt. Zion Memorial Orchestra*.
-Some of my other
-favourite artists include
-*Swans*,
-*mewithoutYou*,
-and *Neutral Milk Hotel*.
-
-[discogs]: http://www.discogs.com/user/programble/collection
-[records]: http://records.cmcenroe.me
+I've also recently been listening to
+*Ought*,
+*Swans*
+and *Deafheaven*.
