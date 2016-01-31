@@ -5,19 +5,18 @@ resume:
   tech:
     - name: Languages
       items:
-        - JavaScript
-        - TypeScript
-        - C
+        - Rust
         - Ruby
-        - Clojure
+        - JavaScript
+        - C
         - Python
         - x86 assembly
 
     - name: Frameworks
       items:
-        - Node.js / io.js
-        - Express
-        - Sinatra
+        - Ruby on Rails
+        - Knockout.js
+        - Node.js
 
     - name: Datastores
       items:
@@ -29,6 +28,7 @@ resume:
       items:
         - Git
         - GitHub
+        - Capistrano
         - Heroku
         - AWS
         - Digital Ocean
@@ -41,6 +41,17 @@ resume:
 
   work:
     - title: Software Developer
+      company: AdGear
+      location: Montréal, Québec, Canada
+      start: October 2015
+      end: present
+      stack: [Knockout.js, Ruby on Rails, PostgreSQL, Capistrano]
+      doings:
+        - Developed new features for the Trader demand-side-platform Rails application
+        - Refactored application code and migrated database schemas
+        - Participated in design of new APIs and technical features
+
+    - title: Software Developer
       company: Busbud
       location: Montréal, Québec, Canada
       start: December 2013
@@ -51,30 +62,6 @@ resume:
         - Developed efficient APIs for accessing and interacting with Busbud's data
         - Implemented models, abstractions and adapters for interacting with partners' APIs
         - Performed PostgreSQL database maintenance
-
-  education:
-    - program: Computer Science Technology
-      school: Dawson College
-      start: 2013
-      end: 2013
-
-    - program: Pure and Applied Science
-      school: Dawson College
-      start: 2012
-      end: 2013
-
-    - school: Howard S. Billings Regional High School
-      start: 2007
-      end: 2012
-
-  awards:
-    - name: Physics Award
-      school: Howard S. Billings Regional High School
-      year: 2012
-
-    - name: Academic Honour Roll
-      school: Howard S. Billings Regional High School
-      year: 2007–2012
 ---
 
 <div class="pdf-link float-right hidden-print">
@@ -115,25 +102,3 @@ resume:
     {% endfor %}
   </ul>
 {% endfor %}
-
-<h3>Education</h3>
-
-<ol class="list-unstyled">
-  {% for education in page.resume.education %}
-    <li>
-      {% if education.program %}
-        {{ education.program }},
-      {% endif %}
-      {{ education.school }},
-      {{ education.start }}–{{ education.end }}
-    </li>
-  {% endfor %}
-</ol>
-
-<h3>Honours and Awards</h3>
-
-<ol class="list-unstyled">
-  {% for award in page.resume.awards %}
-    <li>{{ award.name }}, {{ award.school }}, {{ award.year }}</li>
-  {% endfor %}
-</ol>
