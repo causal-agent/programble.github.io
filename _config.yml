@@ -56,7 +56,3 @@ nav:
     - name: Email
       href: mailto:curtis@cmcenroe.me
       icon: fa-envelope
-
-    - name: Keybase
-      href: https://keybase.io/programble
-      icon: fa-lock
