@@ -1,13 +1,3 @@
-markdown: redcarpet
-redcarpet:
-  extensions:
-    - smart
-    - strikethrough
-    - superscript
-    - tables
-    - with_toc_data
-    - footnotes
-highlighter: pygments
 gems:
   - jekyll-feed
   - jemoji
