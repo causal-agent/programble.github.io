@@ -1,3 +1,7 @@
+kramdown:
+  input: GFM
+  hard_wrap: false
+
 defaults:
   - scope:
       path: ""
