@@ -1,5 +1,8 @@
 ---
 title: How to Brick OS X El Capitan Ruby Gem
+discussions:
+  - site: Lobsters
+    href: https://lobste.rs/s/tgnykh/how_to_brick_os_x_el_capitan_ruby_gem
 ---
 
 Here's the punchline:
