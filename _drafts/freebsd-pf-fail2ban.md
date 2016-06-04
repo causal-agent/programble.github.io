@@ -140,7 +140,7 @@ to use PF.
     banaction = pf
 
 This refers to the file `/usr/local/etc/fail2ban/action.d/pf.conf`,
-which adds banned IPs to a [PF table][table]
+which adds banned IP addresses to a [PF table][table]
 called `fail2ban`.
 This on its own doesn't do anything
 but register the IP with PF,
@@ -173,7 +173,7 @@ and started Fail2ban.
 
 To see it in action,
 I can tail the Fail2ban log,
-list the IPs in the `fail2ban` table,
+list the addresses in the `fail2ban` table,
 and inspect the statistics
 for my PF rules.
 
