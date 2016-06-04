@@ -143,7 +143,7 @@ This refers to the file `/usr/local/etc/fail2ban/action.d/pf.conf`,
 which adds banned IP addresses to a [PF table][table]
 called `fail2ban`.
 This on its own doesn't do anything
-but register the IP with PF,
+but register the address with PF,
 so I needed to add a rule
 to `pf.conf` to block the traffic.
 
