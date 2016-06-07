@@ -1,5 +1,8 @@
 ---
 title: Configuring PF and Fail2ban on FreeBSD
+discussions:
+  - site: Lobsters
+    href: https://lobste.rs/s/3lf8vn/configuring_pf_fail2ban_on_freebsd<Paste>
 ---
 
 I recently created
