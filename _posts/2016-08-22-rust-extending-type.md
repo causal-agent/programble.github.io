@@ -97,10 +97,24 @@ The two methods are now available
 on `Range<T>` objects
 just like any other method.
 To use the methods
-in other modules as well,
-it is necessary to `use RangeExt`.
+in other modules,
+it is necessary to `use`
+the `RangeExt` trait.
 
-Examples of this pattern
+```rust
+#[cfg(test)]
+mod tests {
+    use super::RangeExt;
+
+    #[test]
+    fn range_ext() {
+        assert_eq!(..3, (3..5).before());
+        assert_eq!(5.., (3..5).after());
+    }
+}
+```
+
+More examples of this pattern
 can be found
 in the standard library:
 
