@@ -72,6 +72,7 @@ div.footnotes ol li p {
 .cp               { color: #599; }
 .k, .kc, .kd, .kt { color: #770; }
 .p, .c1           { color: #555; }
+.c                { color: #777; }
 
 /* Days-in-month formula post */
 p.formula { text-align: center; }
