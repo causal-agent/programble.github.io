@@ -114,6 +114,10 @@ mod tests {
 }
 ```
 
+The example code is available in [Gist form][gist].
+
+[gist]: https://gist.github.com/programble/a0986b1af2354d98384b97b610eb6b2f
+
 More examples of this pattern
 can be found
 in the standard library:
