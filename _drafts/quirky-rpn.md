@@ -46,6 +46,8 @@ a BSD-licensed Readline alternative.
 
 [libedit]: http://thrysoee.dk/editline/
 
+---
+
     typedef unsigned long qop;
     typedef unsigned int dop;
 
@@ -80,6 +82,8 @@ The `rtFn` type is the signature of C "runtime" functions,
 which take a value from the stack
 as a parameter
 and cause side-effects.
+
+---
 
     static char *formatBin(qvalue val) {
         static char buf[sizeof(qvalue) * 8 + 1];
@@ -120,6 +124,8 @@ This is the set of runtime functions,
 i.e. C code called by the JIT compiled code.
 They are just used for printing values.
 
+---
+
     static const dop DOP_NOP  = 0x90666666; // nop
 
 Now it gets interesting.
@@ -158,25 +164,46 @@ the immediate down to only a byte.
     static const dop DOP_DUP  = 0x90666657; // push rdi
     static const dop DOP_SWAP = 0x243c8748; // xchg rdi, [rsp]
 
-DROP pops the value on top of the real stack into `rdi`,
+DROP pops the value on top of the memory stack into `rdi`,
 discarding the previous value of `rdi`.
-DUP pushes the value in `rdi` onto the actual stack,
+DUP pushes the value in `rdi` onto the memory stack,
 duplicating it.
 SWAP swaps the value in `rdi`
 with the value pointed to by `rsp`,
-i.e. the top of the real stack.
+i.e. the top of the memory stack.
 
     static const dop DOP_NEG  = 0x90dff748; // neg rdi
     static const dop DOP_ADD  = 0xc7014858; // pop rax; add rdi, rax
+
+Negation and addition
+are the only arithmetic operations
+which can be done in 4 bytes.
+
     static const dop DOP_QUO  = 0x90c78948; // mov rdi, rax
     static const dop DOP_REM  = 0x90d78948; // mov rdi, rdx
+
+These two don't work on their own.
+They must be preceded by a `QOP_DIV` instruction
+which, through `idiv`,
+leaves the quotient in `rax`
+and the remainder in `rdx`.
+
     static const dop DOP_NOT  = 0x90d7f748; // not rdi
     static const dop DOP_AND  = 0xc7214858; // pop rax; and rdi, rax
     static const dop DOP_OR   = 0xc7094858; // pop rax; or rdi, rax
     static const dop DOP_XOR  = 0xc7314858; // pop rax; xor rdi, rax
-    
-    static const qop QOP_PROL = 0x5ffc8948e5894855; // push rbp; mov rbp, rsp; mov rsp, rdi; pop rdi
-    static const qop QOP_EPIL = 0x5dec8948e0894857; // push rdi; mov rax, rsp; mov rsp, rbp; pop rbp
+
+The bitops are straightforward.
+
+---
+
+    // push rbp; mov rbp, rsp; mov rsp, rdi; pop rdi
+    static const qop QOP_PROL = 0x5ffc8948e5894855;
+    // push rdi; mov rax, rsp; mov rsp, rbp; pop rbp
+    static const qop QOP_EPIL = 0x5dec8948e0894857;
+
+Beep.
+
     static const qop QOP_RET  = 0x90666666906666c3; // ret
     static const qop QOP_CRT  = 0xb848906690e58748; // xchg rsp, rbp; mov rax, strict qword 0
     static const qop QOP_CALL = 0x90665fe58748d0ff; // call rax; xchg rsp, rbp; pop rdi
