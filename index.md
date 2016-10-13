@@ -2,12 +2,10 @@
 layout: index
 ---
 
-Hi, I'm Curtis,
+Hi.
+I'm Curtis,
 a software developer
 from Montréal, Québec.
-I work at [AdGear][adgear].
-
-[adgear]: http://adgear.com
 
 I'm interested
 in building APIs
