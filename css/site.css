@@ -58,7 +58,7 @@ a.record { height: 200px; }
 nav.discussions { font-size: 0.833em; }
 nav.discussions ul { margin-top: 0; }
 
-div.footnotes ol {
+div.footnotes ol, div.footnotes code {
   font-size: 0.833em;
 }
 div.footnotes ol li p {
