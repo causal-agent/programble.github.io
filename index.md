@@ -8,10 +8,9 @@ a software developer
 from Montréal, Québec.
 
 I'm interested
-in building APIs
-and working with relational databases,
-as well as creating
-development tooling.
+in systems programming,
+databases,
+and creating well-crafted tools.
 
 I enjoy working on
 hobby [projects](projects.html)
@@ -30,6 +29,6 @@ many from local post-rock groups such as
 *Godspeed You! Black Emperor*
 and *Thee Silver Mt. Zion Memorial Orchestra*.
 I've also recently been listening to
-*Ought*,
-*Swans*
-and *Deafheaven*.
+*Death Grips*,
+*Swans*,
+and *Xiu Xiu*.
