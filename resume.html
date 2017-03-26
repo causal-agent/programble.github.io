@@ -43,7 +43,7 @@ resume:
   work:
     - title: Software Developer
       company: AdGear
-      location: Montréal, Québec, Canada
+      location: Montréal
       start: October 2015
       end: present
       stack: [Knockout.js, Ruby on Rails, PostgreSQL, Capistrano]
@@ -54,7 +54,7 @@ resume:
 
     - title: Software Developer
       company: Busbud
-      location: Montréal, Québec, Canada
+      location: Montréal
       start: December 2013
       end: April 2015
       stack: [Node.js, Express, PostgreSQL, Redis, Heroku, AWS]
@@ -92,9 +92,9 @@ resume:
 
 {% for job in page.resume.work %}
   <h4>
-    {{ job.title }}, {{ job.start }} – {{ job.end }}
+    {{ job.title }}, {{ job.company }} ({{ job.location }})
     <br>
-    <small>{{ job.company }}, {{ job.location }}</small>
+    <small>{{ job.start }} – {{ job.end }}</small>
   </h4>
   <p>{{ job.stack | join:', ' }}</p>
   <ul>
