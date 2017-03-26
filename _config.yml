@@ -43,10 +43,10 @@ nav:
       href: https://github.com/programble
       icon: fa-github-alt
 
-    - name: LinkedIn
-      href: https://ca.linkedin.com/in/cmcenroe
-      icon: fa-linkedin
-
     - name: Email
       href: mailto:curtis@cmcenroe.me
       icon: fa-envelope
+
+    - name: Key
+      href: /cmcenroe.asc
+      icon: fa-lock
