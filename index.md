@@ -15,12 +15,12 @@ and creating well-crafted tools.
 I enjoy working on
 hobby [projects](projects.html)
 and contributing to open-source software
-on [GitHub][github].
+on [GitHub].
 I'm currently interested in
-working with [Rust][rust].
+working with [Rust].
 
-[github]: https://github.com/programble
-[rust]: https://www.rust-lang.org
+[GitHub]: https://github.com/programble
+[Rust]: https://www.rust-lang.org
 
 After software,
 my main interest is (listening to) music.
