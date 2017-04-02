@@ -8,29 +8,21 @@ resume:
         - Rust
         - C
         - x86 assembly
-        - Ruby
-        - JavaScript
-
-    - name: Frameworks
-      items:
-        - Protobuf
-        - Node.js
-        - Ruby on Rails
-        - Knockout.js
+        - Ruby (Rails)
+        - JavaScript (Node.js, Knockout.js)
 
     - name: Databases
       items:
         - PostgreSQL
-        - MongoDB
         - Redis
+        - MongoDB
 
     - name: Tools & Platforms
       items:
+        - Protobuf
+        - American Fuzzy Lop
         - Git
-        - GitHub
-        - Capistrano
         - Heroku
-        - AWS
         - Digital Ocean
 
     - name: Systems
@@ -46,24 +38,45 @@ resume:
       location: Montréal
       start: October 2015
       end: present
-      stack: [Rust, C, Ruby on Rails, PostgreSQL, Protobuf, Knockout.js]
       doings:
-        - Developed a new system for deploying campaign configuration
-        - Set up fuzzing harnesses for Erlang NIFs
-        - Encouraged more direct use of PostgreSQL features
-        - Helped establish practices related to lints, versioning, and deployment
+        I designed and implemented a replacement
+        for the primary ETL
+        providing time-sensitive state
+        to a global real-time bidding system.
+        The design solved performance, correctness, and concurrency
+        issues in the legacy system,
+        and served as a strong example of Rust
+        in the company.
+        I vectorized a hash table implementation
+        in a specialized key-value database service
+        to take advantage of SIMD instruction sets
+        and measured the performance increase
+        with microbenchmarks.
+        I set up fuzzing jobs
+        for many Erlang NIFs written in C
+        to try to find edge case crashes,
+        which can bring down the BEAM.
 
     - title: Software Developer
       company: Busbud
       location: Montréal
       start: December 2013
       end: April 2015
-      stack: [Node.js, Express, PostgreSQL, Redis, Heroku, AWS]
       doings:
-        - Migrated, designed, and optimized data models
-        - Developed efficient APIs for accessing and interacting with Busbud's data
-        - Implemented models, abstractions and adapters for interacting with partners' APIs
-        - Performed PostgreSQL database maintenance
+        I migrated geographic data
+        from MongoDB to PostgreSQL,
+        and replaced Elasticsearch
+        with Postgres materialized views
+        and trigram indexes.
+        This centralized data
+        and improved performance.
+        I introduced promises and functional programming
+        to the Node.js server,
+        which facilitated writing organized, asynchronous code.
+        I helped redesign the interfaces and data models
+        for integrating partner APIs into Busbud’s,
+        which were previously too restricted and lossy.
+
 ---
 
 <div class="pdf-link float-right hidden-print">
@@ -79,16 +92,15 @@ resume:
   <li>github.com/programble</li>
 </ul>
 
-<h3>Technical Experience</h3>
+<h3>Technical experience</h3>
 
-<dl>
+<ul>
   {% for category in page.resume.tech %}
-    <dt>{{ category.name }}</dt>
-    <dd>{{ category.items | join:', ' }}</dd>
+    <li>{{ category.items | join:', ' }}</li>
   {% endfor %}
-</dl>
+</ul>
 
-<h3>Work Experience</h3>
+<h3>Work experience</h3>
 
 {% for job in page.resume.work %}
   <h4>
@@ -96,10 +108,5 @@ resume:
     <br>
     <small>{{ job.start }} – {{ job.end }}</small>
   </h4>
-  <p>{{ job.stack | join:', ' }}</p>
-  <ul>
-    {% for doing in job.doings %}
-      <li>{{ doing }}</li>
-    {% endfor %}
-  </ul>
+  <p>{{ job.doings }}</p>
 {% endfor %}
