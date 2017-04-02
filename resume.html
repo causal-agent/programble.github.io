@@ -2,6 +2,10 @@
 title: Résumé
 
 resume:
+  goal:
+    I am looking to learn more about systems programming and databases,
+    and have a passion for creating well-crafted tools.
+
   tech:
     - name: Languages
       items:
@@ -9,13 +13,20 @@ resume:
         - C
         - x86 assembly
         - Ruby (Rails)
-        - JavaScript (Node.js, Knockout.js)
+        - TypeScript/JavaScript (Node.js, Knockout.js)
 
     - name: Databases
       items:
         - PostgreSQL
         - Redis
         - MongoDB
+
+    - name: Systems
+      items:
+        - FreeBSD
+        - Ubuntu
+        - Arch Linux
+        - macOS
 
     - name: Tools & Platforms
       items:
@@ -25,12 +36,24 @@ resume:
         - Heroku
         - Digital Ocean
 
-    - name: Systems
-      items:
-        - FreeBSD
-        - Ubuntu
-        - Arch Linux
-        - macOS
+  volunteer:
+    I’ve written many, and contributed to some,
+    open-source projects on GitHub.
+    For example,
+    a friend and I
+    created a Clojure-like Lisp
+    with Ruby interoperation
+    on the Rubinius VM.
+    I’ve also made web API clients,
+    stylesheets,
+    development tools,
+    data structure libraries,
+    hobby operating systems,
+    and many Befunge interpreters.
+    I publish short technical articles
+    on my website
+    and have spent time helping others
+    in Rust IRC channels.
 
   work:
     - title: Software Developer
@@ -79,12 +102,6 @@ resume:
 
 ---
 
-<div class="pdf-link float-right hidden-print">
-  <a href="cmcenroe.pdf" target="_blank">
-    <i class="fa fa-download"></i> PDF
-  </a>
-</div>
-
 <h2 class="visible-print">Curtis McEnroe</h2>
 
 <ul class="subtitle list-unstyled visible-print">
@@ -92,13 +109,25 @@ resume:
   <li>github.com/programble</li>
 </ul>
 
-<h3>Technical experience</h3>
+<p>{{ page.resume.goal }}</p>
+
+<div class="pdf-link float-right hidden-print">
+  <a href="cmcenroe.pdf" target="_blank">
+    <i class="fa fa-download"></i> PDF
+  </a>
+</div>
+
+<h3>Technical skills</h3>
 
 <ul>
   {% for category in page.resume.tech %}
     <li>{{ category.items | join:', ' }}</li>
   {% endfor %}
 </ul>
+
+<h3>Volunteer experience</h3>
+
+<p>{{ page.resume.volunteer }}</p>
 
 <h3>Work experience</h3>
 
