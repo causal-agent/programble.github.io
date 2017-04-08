@@ -48,5 +48,5 @@ nav:
       icon: fa-envelope
 
     - name: Key
-      href: /cmcenroe.asc
+      href: http://pgp.mit.edu/pks/lookup?op=get&search=0xCEA2F97ADCFCD77C
       icon: fa-lock
