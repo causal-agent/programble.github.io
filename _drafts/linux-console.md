@@ -138,10 +138,94 @@ by writing a file in [`tmpfiles.d`]:
 The default cursor shape
 is an underline,
 but can be changed to a block
-with the right escape sequence.
+with an escape sequence.
+The [terminfo] database
+defines the capabilities
+`cnorm`, `civis` and `cvvis`
+for normal,
+invisible
+and "very visible" cursor,
+respectively.
+These are loosely defined,
+but "very visible" on the console
+results in a block cursor.
+
+The [`tput`] command
+prints escape sequences
+from the terminfo database.
+Running `tput cvvis` directly on a console
+sets the cursor to block temporarily,
+but curses applications reset it with `cnorm`.
+In [tmux],
+`cvvis` doesn't do anything at all.
+However,
+tmux has an option
+for overriding terminfo,
+which can be used to set `cnorm`
+to the sequence for `cvvis`:
+
+    set -g terminal-overrides "linux:cnorm=\e[?25h\e[?8c"
 
 [`tmpfiles.d`]: http://man7.org/linux/man-pages/man5/tmpfiles.d.5.html
+[terminfo]: http://man7.org/linux/man-pages/man5/terminfo.5.html
+[`tput`]: http://man7.org/linux/man-pages/man1/tput.1.html
+[tmux]: https://tmux.github.io
 
 ## Keymap
+
+Keymaps control
+how the raw input
+from the keyboard
+is translated to logical key presses.
+Similar to fonts,
+default layouts are in `/usr/share/kbd/keymaps`
+and can be loaded with the [`loadkeys`] command.
+
+As described
+in the [`keymaps(5)`] manual page,
+keymaps can inherit from each other
+using the `include` directive.
+This makes it easy to add overrides,
+for example,
+to the default US QWERTY layout
+in `i386/qwerty/us.map.gz`.
+The [`showkey`] command
+can be used to observe
+the raw keyboard input.
+
+The layout I use
+has caps lock mapped to escape
+and many keys
+swapped with their shifted counterparts.
+My [`custom.map`] file looks like this:
+
+    include "/usr/share/kbd/keymaps/i386/qwerty/us.map.gz"
+    keycode 2 = exclam one
+    keycode 3 = at two
+    keycode 4 = numbersign three
+    …
+    keycode 100 = Compose
+    keycode 125 = Escape
+
+I also mapped right alt
+to [compose key],
+which I didn't know
+was supported on the console.
+The default sequences are listed
+in `include/compose.latin1`,
+and more can be added
+in keymap files.
+
+In the same way as the font,
+the keymap can be set permanently
+in [`/etc/vconsole.conf`]:
+
+    echo 'KEYMAP=/home/curtis/Code/dotfiles/custom.map' >> /etc/vconsole.conf
+
+[`loadkeys`]: http://man7.org/linux/man-pages/man1/loadkeys.1.html
+[`keymaps(5)`]: http://man7.org/linux/man-pages/man5/keymaps.5.html
+[`showkey`]: http://man7.org/linux/man-pages/man1/showkey.1.html
+[`custom.map`]: https://github.com/programble/dotfiles/blob/fa22c1e9a9ff6aa1e5b40fc75033d3f5611b3ba0/custom.map
+[compose key]: https://en.wikipedia.org/wiki/Compose_key
 
 ## Applications
