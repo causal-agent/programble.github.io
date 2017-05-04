@@ -229,3 +229,16 @@ in [`/etc/vconsole.conf`]:
 [compose key]: https://en.wikipedia.org/wiki/Compose_key
 
 ## Applications
+
+As a final note,
+these are the applications
+I use on the console:
+
+- [`jfbview`], PDF viewer;
+- [`fbv`], image viewer;
+- [`fbgrab`], screenshot tool, with [patch].
+
+[`jfbview`]: https://aur.archlinux.org/packages/jfbview/
+[`fbv`]: https://www.archlinux.org/packages/community/x86_64/fbv/
+[`fbgrab`]: https://www.archlinux.org/packages/community/x86_64/fbgrab/
+[patch]: https://github.com/programble/fbgrab/commit/60c979319cdcfedafee1922c91d52f2d9e95db1e
