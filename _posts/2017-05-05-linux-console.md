@@ -1,5 +1,8 @@
 ---
 title: Configuring the Linux Console
+discussions:
+  - site: Lobsters
+    href: https://lobste.rs/s/kxntez/configuring_linux_console
 ---
 
 I recently dug up my [HP Chromebook 11] again
