@@ -35,8 +35,8 @@ nav:
     - name: Projects
       href: /projects.html
 
-    - name: Résumé
-      href: /resume.html
+    #- name: Résumé
+    #- href: /resume.html
 
   links:
     - name: GitHub
