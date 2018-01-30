@@ -62,7 +62,7 @@ not preserved across function calls.
 
 <div style="clear: both;"></div>
 
-## Linux system calls
+### Linux system calls
 
 <figure>
     <table class="memory" style="width: 26ch; margin-top: 0;">

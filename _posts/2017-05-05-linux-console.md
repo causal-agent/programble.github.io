@@ -27,7 +27,7 @@ as graphical terminal emulators!
 [splat]: https://github.com/starkers/archbook
 [Arch Linux ARM]: https://archlinuxarm.org
 
-## Printk
+### Printk
 
 First,
 let's get an annoyance out of the way.
@@ -61,7 +61,7 @@ and made permanent in [`sysctl.d`]:
 [`sysctl`]: http://man7.org/linux/man-pages/man8/sysctl.8.html
 [`sysctl.d`]: http://man7.org/linux/man-pages/man5/sysctl.d.5.html
 
-## Font
+### Font
 
 Bitmap fonts for the console
 can be found in `/usr/share/kbd/consolefonts`,
@@ -96,7 +96,7 @@ in [`/etc/vconsole.conf`]:
 [Terminus]: http://terminus-font.sourceforge.net
 [`/etc/vconsole.conf`]: http://man7.org/linux/man-pages/man5/vconsole.conf.5.html
 
-## Colours
+### Colours
 
 The palette used by the console
 for each of the 16 terminal colours
@@ -125,7 +125,7 @@ on every TTY:
 [`console.sh`]: https://github.com/programble/dotfiles/blob/fa22c1e9a9ff6aa1e5b40fc75033d3f5611b3ba0/console.sh
 [Gruvbox]: https://github.com/morhetz/gruvbox
 
-## Cursor
+### Cursor
 
 By default,
 the hardware cursor blinks,
@@ -174,7 +174,7 @@ to the sequence for `cvvis`:
 [`tput`]: http://man7.org/linux/man-pages/man1/tput.1.html
 [tmux]: https://tmux.github.io
 
-## Keymap
+### Keymap
 
 Keymaps control
 how the raw input
@@ -231,7 +231,7 @@ in [`/etc/vconsole.conf`]:
 [`custom.map`]: https://github.com/programble/dotfiles/blob/fa22c1e9a9ff6aa1e5b40fc75033d3f5611b3ba0/custom.map
 [compose key]: https://en.wikipedia.org/wiki/Compose_key
 
-## Applications
+### Applications
 
 As a final note,
 these are the applications

@@ -20,7 +20,7 @@ I'd like to use them.
 These are ordered oldest first,
 though I don't know how old they are.
 
-## "Internet layer audio record listen thing"
+### "Internet layer audio record listen thing"
 
 This idea was to have a page
 that simultaneously played and recorded
@@ -40,7 +40,7 @@ They didn't seem up to the task
 at the time,
 and I don't know if that's changed.
 
-## Upvote downvote anything
+### Upvote downvote anything
 
 This one is a browser extension
 that adds Reddit-style voting buttons
@@ -51,7 +51,7 @@ Sorting the entire page by votes
 could then be toggled.
 Democratize the priority of all content!
 
-## Random rememberable sentences
+### Random rememberable sentences
 
 Basically a way of storing data
 in generated English sentences
@@ -60,7 +60,7 @@ Sentence structure and vocabulary
 could both be used to encode data.
 Perhaps useful for sharing encryption keys?
 
-## Hex editor
+### Hex editor
 
 Very generic.
 I was envisioning
@@ -69,7 +69,7 @@ that let you add annotations
 to address ranges and such.
 With colour.
 
-## Deteriorating image format
+### Deteriorating image format
 
 I was thinking about
 how images [deteriorate][jaypeg] over time
@@ -87,14 +87,14 @@ really crazy proof-of-work constraint.
 
 [jaypeg]: https://youtu.be/QEzhxP-pdos
 
-## GitHub issues happy birthday
+### GitHub issues happy birthday
 
 This seems likely to have already been done.
 A bot that bumps GitHub issues
 that are a year old
 with a dank meme.
 
-## Shell script package manager
+### Shell script package manager
 
 A package manager
 for distributing small scripts,
@@ -103,7 +103,7 @@ I'm not sure why
 this would be necessary,
 honestly.
 
-## Git chat
+### Git chat
 
 Chat client using Git as a backend.
 It would have persistent logs,
@@ -114,7 +114,7 @@ for free.
 PGP integration would also
 probably be useful.
 
-## Editor-invoking mail client
+### Editor-invoking mail client
 
 Git rebase interactive
 is my favourite terminal interface.
@@ -124,7 +124,7 @@ making use of the filesystem
 and my `$EDITOR`.
 No curses garbage.
 
-## File metadata esoteric language
+### File metadata esoteric language
 
 The most recent of my ill-fated ideas,
 an esoteric language

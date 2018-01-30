@@ -16,7 +16,7 @@ Alternatives are listed at the end.
 [SMB]: https://en.wikipedia.org/wiki/Server_Message_Block
 [mDNSResponder]: https://opensource.apple.com/tarballs/mDNSResponder/
 
-## Background
+### Background
 
 SMB is the protocol
 used for file sharing
@@ -41,7 +41,7 @@ hosts to show in "Shared" or "Network."
 [mDNS]: https://en.wikipedia.org/wiki/Multicast_DNS
 [DNS service discovery]: https://en.wikipedia.org/wiki/Zero-configuration_networking#DNS-based_service_discovery
 
-## Samba
+### Samba
 
 First, install Samba.
 There are two versions available in FreeBSD.
@@ -86,7 +86,7 @@ and authenticating with username and password.
 
 [Transmission]: https://transmissionbt.com
 
-## mDNSResponder
+### mDNSResponder
 
 Install mDNSResponder,
 Apple's implementation of mDNS and DNS-SD.
@@ -137,7 +137,7 @@ to `ssh thursday.local`.
 
 [^1]: I'm not sure why both `curtis` and `homes` appear in Finder.
 
-## Alternatives
+### Alternatives
 
 Samba alternatives:
 

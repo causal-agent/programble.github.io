@@ -13,7 +13,7 @@ with [traits][traits].
 
 [traits]: https://doc.rust-lang.org/book/traits.html
 
-## Problem
+### Problem
 
 As an example,
 let's add `before` and `after` methods
@@ -59,7 +59,7 @@ error: cannot define inherent `impl` for a type outside of the crate where the t
   |> ^
 ```
 
-## Solution
+### Solution
 
 The first solution it suggests
 is to define and implement a trait.
