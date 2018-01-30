@@ -41,7 +41,7 @@ redrawing the panel periodically
 is sufficient to keep it visible.
 
 [linux-console]: /2017/05/05/linux-console.md
-[low latency]: TODO link to Dan Luu article(s)
+[low latency]: https://danluu.com/term-latency/
 
 ## The Device
 
@@ -67,6 +67,9 @@ some [`ioctl`] calls which can be used
 to interrogate the framebuffer file.
 
 TODO: Link to that page I found?
+
+[`linux/fb.h`]: https://github.com/torvalds/linux/blob/master/include/uapi/linux/fb.h
+[`ioctl`]: http://man7.org/linux/man-pages/man2/ioctl.2.html
 
 ## The Font
 
