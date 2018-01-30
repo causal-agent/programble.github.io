@@ -43,7 +43,7 @@ is sufficient to keep it visible.
 [linux-console]: /2017/05/05/linux-console.html
 [low latency]: https://danluu.com/term-latency/
 
-## The Device
+### The Device
 
 As one might expect of old-timey Unix things,
 the framebuffer can be accessed as a file,
@@ -93,7 +93,7 @@ an RGB value.
 [`linux/fb.h`]: https://github.com/torvalds/linux/blob/master/include/uapi/linux/fb.h
 [`ioctl`]: http://man7.org/linux/man-pages/man2/ioctl.2.html
 
-## The Font
+### The Font
 
 In order to display text as pixels
 we'll need a font.
@@ -151,7 +151,7 @@ by the width for each character:
 [`psf.h`]: https://github.com/legionus/kbd/blob/master/src/psf.h
 [`zlib`]: http://zlib.net
 
-## The Time
+### The Time
 
 To display the time,
 we call [`strftime`] in a loop
@@ -205,3 +205,4 @@ and [modify] it to your needs.
 
 [`strftime`]: http://man7.org/linux/man-pages/man3/strftime.3.html
 [full implementation]: https://github.com/programble/dotfiles/blob/master/bin/fbclock.c
+[modify]: /image/gpl.jpg
