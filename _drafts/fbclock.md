@@ -40,7 +40,7 @@ to the buffer as necessary,
 redrawing the panel periodically
 is sufficient to keep it visible.
 
-[linux-console]: /2017/05/05/linux-console.md
+[linux-console]: /2017/05/05/linux-console.html
 [low latency]: https://danluu.com/term-latency/
 
 ## The Device
@@ -147,6 +147,10 @@ by the width for each character:
         }
     }
 
+[`kbd`]: http://kbd-project.org
+[`psf.h`]: https://github.com/legionus/kbd/blob/master/src/psf.h
+[`zlib`]: http://zlib.net
+
 ## The Time
 
 To display the time,
@@ -198,3 +202,6 @@ It's rather short and simple,
 so in the spirit of the (A)GPL,
 I encourage you to copy the file
 and [modify] it to your needs.
+
+[`strftime`]: http://man7.org/linux/man-pages/man3/strftime.3.html
+[full implementation]: https://github.com/programble/dotfiles/blob/master/bin/fbclock.c
