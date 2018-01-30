@@ -110,7 +110,7 @@ the `stdio` wrappers from [`zlib`]:
     assert(font);
     struct psf2_header header;
     assert(1 == gzfread(&header, sizeof(header), 1, font));
-    asserf(PSF2_MAGIC_OK(header.magic));
+    assert(PSF2_MAGIC_OK(header.magic));
     uint8_t glyphs[header.length][header.charsize];
     assert(header.length == gzfread(glyphs, header.charsize, header.length, font);
 
@@ -202,6 +202,14 @@ It's rather short and simple,
 so in the spirit of the (A)GPL,
 I encourage you to copy the file
 and [modify] it to your needs.
+
+I'll probably code up
+a battery charge indicator next,
+then move on to
+what I originally intended to program,
+which may appear
+as a new post
+in the future!
 
 [`strftime`]: http://man7.org/linux/man-pages/man3/strftime.3.html
 [full implementation]: https://github.com/programble/dotfiles/blob/master/bin/fbclock.c
