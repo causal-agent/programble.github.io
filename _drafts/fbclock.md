@@ -55,7 +55,7 @@ in the top-left corner of the screen
 (you will need to be `root`
 or add yourself to the `video` group):
 
-    echo -en '\x00\xFF\xFF\xFF' > /dev/fb0
+    echo -en '\xFF\xFF\xFF\x00' > /dev/fb0
 
 In order to put pixels wherever we want
 without overwriting the whole screen,
