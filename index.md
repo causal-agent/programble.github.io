@@ -5,30 +5,23 @@ layout: index
 Hi.
 I'm Curtis,
 a software developer
-from Montréal, Québec.
+from Montréal.
+I'm interested in
+the intricacies of computing
+and craftspersonship.
 
-I'm interested
-in systems programming,
-databases,
-and creating well-crafted tools.
-
-I enjoy working on
-hobby [projects](projects.html)
-and contributing to open-source software
-on [GitHub].
-I'm currently interested in
-working with [Rust].
-
-[GitHub]: https://github.com/programble
-[Rust]: https://www.rust-lang.org
-
-After software,
-my main interest is (listening to) music.
-I collect [records](records.html),
-many from local post-rock groups such as
-*Godspeed You! Black Emperor*
-and *Thee Silver Mt. Zion Memorial Orchestra*.
-I've also recently been listening to
-*Death Grips*,
+My hobby projects
+can be found on [GitHub].
+I'm currently using
+[Rust] or C
+for most of my projects.
+I also collect [records].
+A few of my favourite bands are
 *Swans*,
-and *Xiu Xiu*.
+*Xiu Xiu*,
+*La Dispute*,
+and *Godspeed You! Black Emperor*.
+
+[GitHub]: https://github.com/{{ site.github }}
+[Rust]: https://www.rust-lang.org
+[records]: records.html
