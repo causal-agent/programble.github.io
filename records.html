@@ -418,9 +418,9 @@ records:
 
 <hr>
 
-<div class="flex flex-wrap flex-center">
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
   {% for record in page.records %}
-    <a class="record" href="{{ record.href }}" title="{{ record.title }}">
+    <a style="height: 200px;" href="{{ record.href }}" title="{{ record.title }}">
       <img alt="{{ record.title }}" src="/image/record/{{ record.img }}" width="200" height="200">
     </a>
   {% endfor %}

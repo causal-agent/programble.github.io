@@ -1,56 +1,11 @@
-/* General reusable stuff (from Bootstrap) */
-.text-center { text-align: center; }
-.float-right { float: right; }
-.list-unstyled { padding: 0; }
-.list-unstyled li { list-style-type: none; }
-
-/* Print styles, for resume PDF */
 @media print {
   html { font-size: 14px; }
-  body {
-    margin: 0;
-    color: #000;
-  }
+  body { margin: 0; color: #000; }
   .hidden-print { display: none; }
 }
 @media screen {
   .visible-print { display: none; }
 }
-
-/* Flex */
-div.flex {
-  display: -webkit-flex;
-  display: flex;
-}
-div.flex-wrap {
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-div.flex-center {
-  justify-content: center;
-}
-
-/* Index */
-figure.mugshot {
-  max-width: 25%;
-  margin-top: 0;
-}
-
-/* Projects page */
-div.project {
-  width: 25ch;
-  padding-right: 1ch;
-}
-
-/* Resume */
-
-div.pdf-link { margin-top: 1.5rem; }
-
-/* Records */
-
-a.record { height: 200px; }
-
-/* Posts */
 
 .subtitle { margin-top: 0; }
 
@@ -64,7 +19,6 @@ div.footnotes ol li p {
   margin-top: 0;
 }
 
-/* Rouge highlighter */
 .na, .nt, .nf     { color: #900; }
 .s, .s1, .s2      { color: #090; }
 .nb, .mi, .mh     { color: #009; }
@@ -73,7 +27,7 @@ div.footnotes ol li p {
 .p, .c1           { color: #555; }
 .c                { color: #777; }
 
-/* Days-in-month formula post */
+/* days-in-month-formula */
 p.formula { text-align: center; }
 table.tov { text-align: right; }
 table.tov th {
@@ -83,8 +37,7 @@ table.tov th {
 table.tov td.y { background-color: #9e9; }
 table.tov td.n { background-color: #e99; }
 
-/* Tetrasm post */
-
+/* tetrasm-1 */
 table.memory code {
   background-color: transparent;
   border: none;
