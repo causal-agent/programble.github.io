@@ -15,12 +15,21 @@
 <link rel="stylesheet" href="/css/site.css">
 
 <header>
-  <h1>Curtis McEnroe</h1>
-  <nav>
+  <h1>{{ site.name }}</h1>
+  <nav class="visible-print">
     <ul>
-      {% for nav in site.nav %}
-        <li><a href="{{ nav.href }}">{{ nav.name }}</a></li>
-      {% endfor %}
+      <li>{{ site.domain }}</li>
+      <li>{{ site.email }}</li>
+      <li>github.com/{{ site.github }}</li>
+    </ul>
+  </nav>
+  <nav class="hidden-print">
+    <ul>
+      <li><a href="/">Posts</a></li>
+      <li><a href="/resume.html">Résumé</a></li>
+      <li><a href="https://github.com/{{ site.github }}">Projects</a></li>
+      <li><a href="mailto:{{ site.email }}">Email</a></li>
+      <li><a href="http://pgp.mit.edu/pks/lookup?op=get&search={{ site.key }}">Key</a></li>
     </ul>
   </nav>
 </header>

@@ -1,9 +1,16 @@
-gems:
-  - jekyll-feed
-
 kramdown:
   input: GFM
   hard_wrap: false
+
+gems:
+  - jekyll-feed
+url: https://cmcenroe.me
+
+name: Curtis McEnroe
+domain: cmcenroe.me
+email: curtis@causal.agency
+key: 0xCEA2F97ADCFCD77C
+github: programble
 
 defaults:
   - scope:
@@ -20,24 +27,3 @@ defaults:
       type: "drafts"
     values:
       layout: post
-
-name: Curtis McEnroe
-email: curtis@causal.agency
-url: https://cmcenroe.me
-domain: cmcenroe.me
-
-nav:
-  - name: Posts
-    href: /
-
-  - name: Résumé
-    href: /resume.html
-
-  - name: Projects
-    href: https://github.com/programble
-
-  - name: Email
-    href: mailto:curtis@causal.agency
-
-  - name: Key
-    href: http://pgp.mit.edu/pks/lookup?op=get&search=0xCEA2F97ADCFCD77C
