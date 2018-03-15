@@ -14,27 +14,12 @@
 <link rel="stylesheet" href="//writ.cmcenroe.me/1.0.4/writ.min.css">
 <link rel="stylesheet" href="/css/site.css">
 
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
 <header>
   <h1>Curtis McEnroe</h1>
-
   <nav>
     <ul>
-      {% for nav_page in site.nav.pages %}
-        <li><a href="{{ nav_page.href }}">{{ nav_page.name }}</a></li>
-      {% endfor %}
-    </ul>
-  </nav>
-
-  <nav>
-    <ul>
-      {% for link in site.nav.links %}
-        <li>
-          <a href="{{ link.href }}">
-            <i class="fa {{ link.icon }}"></i> {{ link.name }}
-          </a>
-        </li>
+      {% for nav in site.nav %}
+        <li><a href="{{ nav.href }}">{{ nav.name }}</a></li>
       {% endfor %}
     </ul>
   </nav>

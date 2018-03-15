@@ -22,30 +22,22 @@ defaults:
       layout: post
 
 name: Curtis McEnroe
-email: curtis@cmcenroe.me
+email: curtis@causal.agency
 url: https://cmcenroe.me
 domain: cmcenroe.me
 
 nav:
-  pages:
-    - name: Home
-      href: /
+  - name: Posts
+    href: /
 
-    - name: Projects
-      href: /projects.html
+  - name: Résumé
+    href: /resume.html
 
-    #- name: Résumé
-    #- href: /resume.html
+  - name: Projects
+    href: https://github.com/programble
 
-  links:
-    - name: GitHub
-      href: https://github.com/programble
-      icon: fa-github-alt
+  - name: Email
+    href: mailto:curtis@causal.agency
 
-    - name: Email
-      href: mailto:curtis@cmcenroe.me
-      icon: fa-envelope
-
-    - name: Key
-      href: http://pgp.mit.edu/pks/lookup?op=get&search=0xCEA2F97ADCFCD77C
-      icon: fa-lock
+  - name: Key
+    href: http://pgp.mit.edu/pks/lookup?op=get&search=0xCEA2F97ADCFCD77C
