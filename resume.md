@@ -7,7 +7,8 @@ learning more systems programming
 and really getting into
 the details of things.
 I have a passion for
-creating well-crafted tools.
+well-crafted tools
+and making computers suck less.
 
 Here are some of the technologies
 I've enjoyed working with:
@@ -29,7 +30,7 @@ and too many Befunge interpreters.
 I try to help out
 in Rust IRC channels
 and sometimes write
-technical blog posts.
+for my technical blog.
 My posts have even been on Hacker News twice,
 so you could say I'm kind of a big deal.
 
