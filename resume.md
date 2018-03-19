@@ -49,11 +49,12 @@ to create interesting images.
 
 #### Software developer at Hopper, May 2017 – August 2017
 
-I learned some Scala
-and a little bit of HBase,
-and set up a rolling index
-for events in Elasticsearch.
-I left due to burnout
+I learned a little
+Scala,
+HBase
+and Elasticsearch.
+I couldn't stay long
+due to burnout
 from my previous job.
 
 #### Software developer at AdGear, October 2015 – April 2017
