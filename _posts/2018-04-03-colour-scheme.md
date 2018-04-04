@@ -1,5 +1,8 @@
 ---
 title: I Made My Own Colour Scheme and You Can Too!
+discussions:
+  - site: Lobsters
+    href: https://lobste.rs/s/rxiktf/i_made_my_own_colour_scheme_you_can_too
 ---
 
 ![Colour scheme][scheme.png]
