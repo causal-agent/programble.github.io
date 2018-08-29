@@ -5,6 +5,26 @@ discussions:
     href: https://lobste.rs/s/3lf8vn/configuring_pf_fail2ban_on_freebsd<Paste>
 ---
 
+> On Jul 18, 2018, at 08:17, JC wrote:
+>
+> I am writing about your blog post from a couple years back on
+> configuring fail2ban with FreeBSD pf. That post was very helpful to
+> me, but now it might need a slight update to work with the new
+> fail2ban (v0.10.1 +). I won't elaborate much in this email since you
+> can see details on the git issues page [here][issue] (just scroll to
+> the bottom to get the summary) and another quick discussion
+> [here][discussion].
+>
+> Basically, a new line:
+>
+>     anchor "f2b/*"
+>
+> needs to be added to `/etc/pf.conf` (in the translation section, after
+> the nat and rdr rules) so that it can work with the updated fail2ban.
+
+[issue]: https://github.com/fail2ban/fail2ban/issues/1915
+[discussion]: http://www.purplehat.org/?page_id=566
+
 I recently created
 a new [DigitalOcean droplet][droplet]
 using the [FreeBSD][freebsd] 10.2 image
