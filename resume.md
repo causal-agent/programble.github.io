@@ -3,59 +3,64 @@ title: Résumé
 ---
 
 I'm interested in
-learning more systems programming
-and really getting into
-the details of things.
-I have a passion for
-well-crafted tools
-and making computers suck less.
+learning the intricate details of systems
+and building well-crafted tools.
+I want to make software that works.
 
 Here are some of the technologies
 I've enjoyed working with:
 
-- Rust, C, x86 assembly, Ruby, TypeScript/JavaScript
-- PostgreSQL, SQLite, Redis
-- FreeBSD, macOS, Arch Linux
-- Protobuf, American Fuzzy Lop, ncurses, zlib
+- C, make, mdoc, zlib, curses
+- Rust, Protobuf, American Fuzzy Lop
+- Ruby, TypeScript/JavaScript, PostgreSQL, SQLite
+- FreeBSD, NetBSD, macOS, Arch Linux
 
-I write a lot of code
+I write code
 because I enjoy solving problems
 and learning how to do things myself.
-I've made web API clients,
+I've worked on web API clients,
 stylesheets,
 development tools,
-data structure libraries,
-hobby operating systems,
-and too many Befunge interpreters.
-I try to help out
-in Rust IRC channels
-and sometimes write
-for my technical blog.
-My posts have even been on Hacker News twice,
-so you could say I'm kind of a big deal.
+data structures,
+hobby operating systems
+and creative projects.
+For some time
+I helped out
+in Rust IRC channels,
+which was helpful for my own learning.
+I also try to write
+about new things I've learned
+on my technical blog.
 
 #### Funemployed at home, August 2017 –
 
 Away from work,
-I tried to focus on creativity.
-I created a public, collaborative ASCII art SSH service
-using memory-mapped files, local sockets and ncurses.
-I wrote an interactive graphics data explorer
-with framebuffer, X11 and Cocoa interfaces.
-Along with that,
-I wrote a PNG encoder
-and used bugs in my own code
-to create interesting images.
+I tried to focus on creativity
+and communication.
+I created a public collaborative ASCII art project
+as an SSH service using
+memory-mapped files,
+local sockets
+and curses.
+I started a terminal IRC client,
+also available over SSH,
+where I focused on improved UX.
+I wrote a PNG encoder and optimizer,
+and used bugs in my code
+to create visually interesting "glitch" images.
+I designed my own terminal colour scheme
+and programmed a bitmap font editor.
 
 #### Software developer at Hopper, May 2017 – August 2017
 
-I learned a little
+I learned a little bit of
 Scala,
 HBase
 and Elasticsearch.
-I couldn't stay long
-due to burnout
-from my previous job.
+I didn't stay long
+due to lasting
+negative mental health effects
+of my previous job.
 
 #### Software developer at AdGear, October 2015 – April 2017
 
