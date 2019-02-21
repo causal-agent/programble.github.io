@@ -15,41 +15,18 @@ I've enjoyed working with:
 - Ruby, TypeScript/JavaScript, PostgreSQL, SQLite
 - FreeBSD, NetBSD, macOS, Arch Linux
 
-I write code
-because I enjoy solving problems
-and learning how to do things myself.
-I've worked on web API clients,
-stylesheets,
-development tools,
-data structures,
-hobby operating systems
-and creative projects.
-For some time
-I helped out
-in Rust IRC channels,
-which was helpful for my own learning.
-I also try to write
-about new things I've learned
-on my technical blog.
-
 #### Funemployed at home, August 2017 –
 
 Away from work,
-I tried to focus on creativity
-and communication.
-I created a public collaborative ASCII art project
-as an SSH service using
-memory-mapped files,
-local sockets
-and curses.
-I started a terminal IRC client,
-also available over SSH,
-where I focused on improved UX.
-I wrote a PNG encoder and optimizer,
-and used bugs in my code
-to create visually interesting "glitch" images.
-I designed my own terminal colour scheme
-and programmed a bitmap font editor.
+I focused on creativity and communication.
+I created a collaborative ASCII art project
+as a public SSH service.
+I started a terminal IRC client
+and worked on easy but significant UX improvements.
+I designed a colour scheme,
+wrote a PNG optimizer,
+a bitmap font editor
+and a syntax highlighter.
 
 #### Software developer at Hopper, May 2017 – August 2017
 
@@ -67,20 +44,19 @@ of my previous job.
 I designed and implemented a replacement
 for the primary ETL
 providing time-sensitive state
-to a global real-time bidding system.
-The design solved performance, correctness, and concurrency
-issues in the legacy system,
-and served as a strong example of Rust
-in the company.
+to a real-time bidding system.
+The design solved
+performance, correctness and concurrency
+issues in the legacy system.
 I vectorized a hash table implementation
-in a specialized key-value database service
-to take advantage of SIMD instruction sets
-and measured the performance increase
-with microbenchmarks.
+in a specialized key-value store
+to take advantage of SIMD.
 I set up fuzzing jobs
-for many Erlang NIFs written in C
-to try to find edge case crashes,
-which can bring down the BEAM.
+for many Erlang NIFs written in C,
+for which crashes can bring down the BEAM.
+I also designed schemas
+and database constraints
+to ensure data integrity.
 
 #### Software developer at Busbud, December 2013 – April 2015
 
