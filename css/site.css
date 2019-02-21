@@ -1,6 +1,13 @@
 @media print {
   html { font-size: 14px; }
   body { margin: 0; color: #000; }
+  p {
+    text-align: justify;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
   .hidden-print { display: none; }
 }
 @media screen {
