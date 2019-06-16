@@ -15,7 +15,24 @@ I've enjoyed working with:
 - Ruby, TypeScript/JavaScript, PostgreSQL, SQLite
 - FreeBSD, NetBSD, macOS, Arch Linux
 
-#### Funemployed, August 2017 –
+#### Untether AI, April 2018 –
+
+Using a modified QEMU,
+I created an emulated device
+for the PCIe interface
+of a neural network accelerator.
+The QEMU device communicates
+with a software simulation
+of the accelerator
+over a socket,
+using the same protocol
+that will be used in hardware.
+This allowed for rapid development
+of kernel- and user-space drivers
+as well as end-to-end testing
+of the proposed design.
+
+#### Funemployed, August 2017 – April 2018
 
 Away from work,
 I focused on creativity and communication.
