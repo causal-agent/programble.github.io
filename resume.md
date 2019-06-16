@@ -15,7 +15,7 @@ I've enjoyed working with:
 - Ruby, TypeScript/JavaScript, PostgreSQL, SQLite
 - FreeBSD, NetBSD, macOS, Arch Linux
 
-#### Funemployed at home, August 2017 –
+#### Funemployed, August 2017 –
 
 Away from work,
 I focused on creativity and communication.
@@ -28,7 +28,7 @@ wrote a PNG optimizer,
 a bitmap font editor
 and a syntax highlighter.
 
-#### Software developer at Hopper, May 2017 – August 2017
+#### Hopper, May 2017 – August 2017
 
 I learned a little bit of
 Scala,
@@ -39,7 +39,7 @@ due to lasting
 negative mental health effects
 of my previous job.
 
-#### Software developer at AdGear, October 2015 – April 2017
+#### AdGear, October 2015 – April 2017
 
 I designed and implemented a replacement
 for the primary ETL
@@ -58,7 +58,7 @@ I also designed schemas
 and database constraints
 to ensure data integrity.
 
-#### Software developer at Busbud, December 2013 – April 2015
+#### Busbud, December 2013 – April 2015
 
 I migrated geographic data
 from CouchDB to PostgreSQL,
