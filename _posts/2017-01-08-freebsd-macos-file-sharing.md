@@ -69,7 +69,7 @@ of the [Transmission] daemon.
 In order to allow users to log in over SMB,
 give them a password with `smbpasswd` as root.
 
-    smbpasswd -a curtis
+    smbpasswd -a june
 
 Now, enable and start the Samba server.
 
@@ -125,17 +125,13 @@ add the following to `/usr/local/etc/mdnsresponderposix.conf`.
 Now start the service
 and Finder should *find* the shared directories.
 You may have to click "Connect As..."
-to enter your credentials the first time.[^1]
+to enter your credentials the first time.
 
     service mdnsresponderposix start
-
-[![Finder showing shared directories](/image/finder-smb.png)](/image/finder-smb.png)
 
 As a bonus,
 it should now be possible
 to `ssh thursday.local`.
-
-[^1]: I'm not sure why both `curtis` and `homes` appear in Finder.
 
 ### Alternatives
 

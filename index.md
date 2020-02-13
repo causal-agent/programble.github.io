@@ -3,8 +3,7 @@ layout: index
 ---
 
 Hi.
-I'm Curtis,
-a software developer
+I'm a software developer
 from Montréal.
 I'm interested in
 the intricacies of computing

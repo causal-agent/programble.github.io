@@ -262,7 +262,7 @@ In the end, my `home.onc` file ended up looking like this:
           "RemoteCertEKU": "TLS Web Server Authentication",
           "SaveCredentials": true,
           "ServerPollTimeout": 10,
-          "Username": "curtis",
+          "Username": "june",
           "KeyDirection": 1,
           "IgnoreDefaultRoute": true,
           "TLSAuthContents": "redacted"

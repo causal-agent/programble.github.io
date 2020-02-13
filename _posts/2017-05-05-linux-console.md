@@ -223,7 +223,7 @@ In the same way as the font,
 the keymap can be set permanently
 in [`/etc/vconsole.conf`]:
 
-    echo 'KEYMAP=/home/curtis/Code/dotfiles/custom.map' >> /etc/vconsole.conf
+    echo 'KEYMAP=/home/june/Code/dotfiles/custom.map' >> /etc/vconsole.conf
 
 [`loadkeys`]: http://man7.org/linux/man-pages/man1/loadkeys.1.html
 [`keymaps(5)`]: http://man7.org/linux/man-pages/man5/keymaps.5.html

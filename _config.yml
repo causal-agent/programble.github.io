@@ -6,10 +6,9 @@ gems:
   - jekyll-feed
 url: https://cmcenroe.me
 
-name: Curtis McEnroe
+name: C. McEnroe
 domain: cmcenroe.me
-email: curtis@causal.agency
-key: 0xCEA2F97ADCFCD77C
+email: june@causal.agency
 github: programble
 
 defaults:

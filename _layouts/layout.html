@@ -8,7 +8,6 @@
   <title>{{ site.name }}</title>
 {% endif %}
 
-<link rel="icon" type="image/jpeg" href="/image/face.jpg">
 {% feed_meta %}
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,6 @@
 <link rel="stylesheet" href="/css/site.css">
 
 <header>
-  <h1>{{ site.name }}</h1>
   <nav class="visible-print">
     <ul>
       <li>{{ site.domain }}</li>
@@ -27,10 +25,8 @@
   <nav class="hidden-print">
     <ul>
       <li><a href="/">Posts</a></li>
-      <li><a href="/resume.html">Résumé</a></li>
-      <li><a href="https://github.com/{{ site.github }}">Projects</a></li>
+      <li><a href="https://github.com/{{ site.github }}">GitHub</a></li>
       <li><a href="mailto:{{ site.email }}">Email</a></li>
-      <li><a href="http://pgp.mit.edu/pks/lookup?op=get&search={{ site.key }}">Key</a></li>
     </ul>
   </nav>
 </header>
