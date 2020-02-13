@@ -116,7 +116,7 @@ wasn't very easy on the eyes.
 
 ![ANSI colours][ansi.png]
 
-[`scheme.c`]: https://github.com/programble/dotfiles/blob/e9834a80ca32c65c8341558ce73c46ff5319e628/bin/scheme.c
+[`scheme.c`]: https://github.com/programble/src/blob/master/bin/scheme.c
 
 From there I spent a day
 modifying the values in each of those `x` calls.
